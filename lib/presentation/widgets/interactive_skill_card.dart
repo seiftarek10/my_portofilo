@@ -17,7 +17,7 @@ class _InteractiveSkillCardState extends State<InteractiveSkillCard> {
       onEnter: (_) => setState(() => isHovered = true),
       onExit: (_) => setState(() => isHovered = false),
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 250),
+        duration: const Duration(milliseconds: 249),
         margin: const EdgeInsets.only(bottom: 40), 
         padding: const EdgeInsets.all(25),
         decoration: BoxDecoration(
