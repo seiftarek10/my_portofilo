@@ -26,7 +26,9 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOutCubic,
         margin: const EdgeInsets.only(bottom: 40),
-     padding: EdgeInsets.all(MediaQuery.of(context).size.width < 600 ? 20 : 40),
+        padding: EdgeInsets.all(
+          MediaQuery.of(context).size.width < 600 ? 20 : 40,
+        ),
         decoration: BoxDecoration(
           color: isHovered
               ? const Color(0xFF121B2C).withValues(alpha: 0.8)
@@ -278,43 +280,30 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
       ),
     );
   }
-Widget _buildImageListView(List images) {
-  return SizedBox(
-    height: 260,
-    child: ListView.builder(
-      scrollDirection: Axis.horizontal,
-      physics: const BouncingScrollPhysics(),
-      itemCount: images.length,
-      itemBuilder: (context, imgIndex) {
-        return Container(
-          width: 140, // ده عرض الصورة في الـ ListView
-          margin: const EdgeInsets.only(right: 15),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: const Color(0xFF30363D), width: 1.5),
-          ),
-          clipBehavior: Clip.antiAlias,
-          child: Stack(
-            fit: StackFit.expand,
-            children: [
-              Image.asset(
-                images[imgIndex],
-                fit: BoxFit.cover,
-              ),
-              Container(color: Colors.black.withValues(alpha: 0.4)),
-              
-              Padding(
-                padding: const EdgeInsets.all(8),
-                child: Image.asset(
-                  images[imgIndex],
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ],
-          ),
-        );
-      },
-    ),
-  );
-}
+
+  Widget _buildImageListView(List images) {
+    return SizedBox(
+      height: 260,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
+        itemCount: images.length,
+        itemBuilder: (context, imgIndex) {
+          return Container(
+            margin: const EdgeInsets.only(right: 15),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(color: const Color(0xFF30363D), width: 1.5),
+              color: const Color(0xFF0D131F),
+            ),
+            clipBehavior: Clip.antiAlias,
+            child: AspectRatio(
+              aspectRatio: 8 / 16,
+              child: Image.asset(images[imgIndex], fit: BoxFit.fill),
+            ),
+          );
+        },
+      ),
+    );
+  }
 }
