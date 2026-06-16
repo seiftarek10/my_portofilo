@@ -287,7 +287,7 @@ Widget _buildImageListView(List images) {
       itemCount: images.length,
       itemBuilder: (context, imgIndex) {
         return Container(
-          width: 140,
+          width: 140, // ده عرض الصورة في الـ ListView
           margin: const EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12),
@@ -301,18 +301,13 @@ Widget _buildImageListView(List images) {
                 images[imgIndex],
                 fit: BoxFit.cover,
               ),
-              Container(color: Colors.black.withValues(alpha: 0.6)),
+              Container(color: Colors.black.withValues(alpha: 0.4)),
+              
               Padding(
                 padding: const EdgeInsets.all(8),
                 child: Image.asset(
                   images[imgIndex],
                   fit: BoxFit.contain,
-                  alignment: Alignment.center,
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Center(
-                      child: Icon(Icons.broken_image, color: Color(0xFF484F58)),
-                    );
-                  },
                 ),
               ),
             ],
