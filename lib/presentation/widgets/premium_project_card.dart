@@ -278,42 +278,48 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
       ),
     );
   }
-
-  Widget _buildImageListView(List images) {
-    return SizedBox(
-      height: 260,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        physics: const BouncingScrollPhysics(),
-        itemCount: images.length,
-        itemBuilder: (context, imgIndex) {
-          return Container(
-            width: 120,
-            margin: const EdgeInsets.only(right: 15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF30363D), width: 1.5),
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: Image.asset(
-              images[imgIndex],
-              fit: BoxFit.cover,
-              errorBuilder: (context, error, stackTrace) {
-                return Container(
-                  color: const Color(0xFF161B22),
-                  child: const Center(
-                    child: Icon(
-                      Icons.image_not_supported_rounded,
-                      color: Color(0xFF484F58),
-                      size: 28,
-                    ),
-                  ),
-                );
-              },
-            ),
-          );
-        },
-      ),
-    );
-  }
+Widget _buildImageListView(List images) {
+  return SizedBox(
+    height: 260,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      physics: const BouncingScrollPhysics(),
+      itemCount: images.length,
+      itemBuilder: (context, imgIndex) {
+        return Container(
+          width: 140,
+          margin: const EdgeInsets.only(right: 15),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: const Color(0xFF30363D), width: 1.5),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              Image.asset(
+                images[imgIndex],
+                fit: BoxFit.cover,
+              ),
+              Container(color: Colors.black.withValues(alpha: 0.6)),
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Image.asset(
+                  images[imgIndex],
+                  fit: BoxFit.contain,
+                  alignment: Alignment.center,
+                  errorBuilder: (context, error, stackTrace) {
+                    return const Center(
+                      child: Icon(Icons.broken_image, color: Color(0xFF484F58)),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        );
+      },
+    ),
+  );
+}
 }
