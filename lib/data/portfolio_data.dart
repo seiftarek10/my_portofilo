@@ -126,7 +126,8 @@ class PortfolioData {
           "A production-grade mobile ecosystem built with a hyper-strict separation of concerns and multi-tenant environment configurations.",
       "metrics": {"Speed": "99%", "Sync": "Realtime", "Architecture": "Clean"},
       "github": "https://github.com/seiftarek10/snap_shot_e-commerce",
-      "demo": "https://snap-shot-demo.web.app",
+      "demo":
+          "https://drive.google.com/drive/folders/1QAIacheLYH6CC-hBk6E9JoECYSiUEjpA?usp=sharing",
       "features": [
         {
           "text":
