@@ -45,41 +45,55 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   Widget _buildSectionHeader(String title) {
-    return Container(
-      padding: const EdgeInsets.only(top: 10, bottom: 30),
-      alignment: Alignment.centerLeft,
-      child: Stack(
-        children: [
-          Text(
-            title.toUpperCase(),
-            style: TextStyle(
-              fontSize: 36,
-              fontWeight: FontWeight.w900,
-              fontFamily: 'Fira Code',
-              letterSpacing: 2,
-              color: const Color(0xFF6366F1).withValues(alpha: 0.3),
-            ),
-          ),
-          Transform.translate(
-            offset: const Offset(-3, -3),
-            child: ShaderMask(
-              shaderCallback: (bounds) => const LinearGradient(
-                colors: [Colors.white, Color(0xFF58A6FF), Color(0xFF6366F1)],
-              ).createShader(bounds),
-              child: Text(
-                title.toUpperCase(),
-                style: const TextStyle(
-                  fontSize: 36,
-                  fontWeight: FontWeight.w900,
-                  fontFamily: 'Fira Code',
-                  letterSpacing: 2,
-                  color: Colors.white,
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        double fontSize = constraints.maxWidth < 600 ? 24 : 36;
+
+        return Container(
+          padding: const EdgeInsets.only(top: 10, bottom: 20),
+          alignment: Alignment.centerLeft,
+          child: FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Stack(
+              children: [
+                Text(
+                  title.toUpperCase(),
+                  style: TextStyle(
+                    fontSize: fontSize,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: 'Fira Code',
+                    letterSpacing: 2,
+                    color: const Color(0xFF6366F1).withValues(alpha: 0.3),
+                  ),
                 ),
-              ),
+                Transform.translate(
+                  offset: const Offset(-3, -3),
+                  child: ShaderMask(
+                    shaderCallback: (bounds) => const LinearGradient(
+                      colors: [
+                        Colors.white,
+                        Color(0xFF58A6FF),
+                        Color(0xFF6366F1),
+                      ],
+                    ).createShader(bounds),
+                    child: Text(
+                      title.toUpperCase(),
+                      style: TextStyle(
+                        fontSize: fontSize, // حجم خط متغير
+                        fontWeight: FontWeight.w900,
+                        fontFamily: 'Fira Code',
+                        letterSpacing: 2,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 
@@ -87,51 +101,61 @@ class _PortfolioPageState extends State<PortfolioPage> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     bool isMobile = screenWidth < 768;
-    return Scaffold(
-      backgroundColor: const Color(0xFF06090E),
-      body: Container(
-        decoration: const BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Color(0xFF06090E), Color(0xFF0C111C), Color(0xFF040814)],
+    double textScaleFactor = MediaQuery.of(context).size.width < 768
+        ? 0.8
+        : 1.0;
+    return MediaQuery(
+      data: MediaQuery.of(
+        context,
+      ).copyWith(textScaler: TextScaler.linear(textScaleFactor)),
+      child: Scaffold(
+        backgroundColor: const Color(0xFF06090E),
+        body: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF06090E), Color(0xFF0C111C), Color(0xFF040814)],
+            ),
           ),
-        ),
-        child: Stack(
-          children: [
-            SelectionArea(
-              child: SingleChildScrollView(
-                controller: _scrollController,
-                physics: const BouncingScrollPhysics(),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: isMobile ? 20 : 50),
-                  child: Column(
-                    children: [
-                      const SizedBox(height: 120),
-                      _buildPremiumHeroSection(),
+          child: Stack(
+            children: [
+              SelectionArea(
+                child: SingleChildScrollView(
+                  controller: _scrollController,
+                  physics: const BouncingScrollPhysics(),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: isMobile ? 20 : 50,
+                    ),
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 120),
+                        _buildPremiumHeroSection(),
 
-                      Container(
-                        key: _summaryKey,
-                        child: _buildSummarySection(),
-                      ),
-                      _buildMainGridContext(),
-                      Container(
-                        key: _architectureKey,
-                        child: _buildExtraArchitecturalSections(),
-                      ),
-                      Container(
-                        key: _contactKey,
-                        child: _buildContactMeSection(),
-                      ),
+                        Container(
+                          key: _summaryKey,
+                          child: _buildSummarySection(),
+                        ),
+                        _buildMainGridContext(),
+                        Container(
+                          key: _architectureKey,
+                          child: _buildExtraArchitecturalSections(),
+                        ),
+                        Container(
+                          key: _contactKey,
+                          child: _buildContactMeSection(),
+                        ),
 
-                      _buildPremiumFooter(),
-                    ],
+                        _buildPremiumFooter(),
+                      ],
+                    ),
                   ),
                 ),
               ),
-            ),
-            _buildStickyNavbar(),
-          ],
+              _buildStickyNavbar(),
+            ],
+          ),
         ),
       ),
     );
@@ -267,7 +291,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
   }
 
   Widget _buildPremiumHeroSection() {
-    bool isMobileLayout = MediaQuery.of(context).size.width < 1100;
+    double screenWidth = MediaQuery.of(context).size.width;
+    bool isMobileLayout = screenWidth < 1100;
+
+    double imageSize = isMobileLayout ? 250 : 420;
+    double nameFontSize = isMobileLayout ? 40 : 76;
 
     Widget heroContent = Column(
       crossAxisAlignment: isMobileLayout
@@ -300,13 +328,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
         Text(
           PortfolioData.name,
           textAlign: isMobileLayout ? TextAlign.center : TextAlign.start,
-          style: const TextStyle(
+          style: TextStyle(
             fontFamily: 'Fira Code',
-            fontSize: 76,
+            fontSize: nameFontSize,
             fontWeight: FontWeight.w900,
             color: Colors.white,
             letterSpacing: 6.0,
-            shadows: [
+            shadows: const [
               Shadow(
                 color: Color(0xFF58A6FF),
                 offset: Offset(0, 4),
@@ -343,8 +371,8 @@ class _PortfolioPageState extends State<PortfolioPage> {
 
     Widget heroImage = Center(
       child: Container(
-        width: 420,
-        height: 420,
+        width: imageSize,
+        height: imageSize,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: const Color(0xFF161B22).withValues(alpha: 0.3),
@@ -353,7 +381,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
         child: ClipOval(
           child: Image.asset(
             PortfolioData.profileImagePath,
-            fit: BoxFit.contain,
+            fit: BoxFit.cover,
             errorBuilder: (context, error, stackTrace) {
               return const Icon(
                 Icons.person_outline_rounded,
@@ -368,10 +396,10 @@ class _PortfolioPageState extends State<PortfolioPage> {
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.only(bottom: 80, top: 20),
+      padding: EdgeInsets.only(bottom: isMobileLayout ? 40 : 80, top: 20),
       child: isMobileLayout
           ? Column(
-              children: [heroImage, const SizedBox(height: 50), heroContent],
+              children: [heroImage, const SizedBox(height: 40), heroContent],
             )
           : Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -462,42 +490,45 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ),
     );
   }
+Widget _buildMainGridContext() {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        bool isMobile = constraints.maxWidth < 950;
 
-  Widget _buildMainGridContext() {
-    bool isMobile = MediaQuery.of(context).size.width < 1250;
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 40),
-      child: Container(
-        constraints: const BoxConstraints(maxWidth: 1550),
-        child: isMobile
-            ? Column(
-                children: [
-                  Container(key: _projectsKey, child: _buildProjectsPanel()),
-                  const SizedBox(height: 40),
-                  Container(key: _skillsKey, child: _buildSkillsPanel()),
-                ],
-              )
-            : Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    flex: 6,
-                    child: Container(
-                      key: _projectsKey,
-                      child: _buildProjectsPanel(),
+        return Padding(
+          padding: const EdgeInsets.only(bottom: 40),
+          child: isMobile
+              ? Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    // التعديل: المهارات بقت هي اللي فوق في الموبايل
+                    Container(key: _skillsKey, child: _buildSkillsPanel()),
+                    const SizedBox(height: 40),
+                    Container(key: _projectsKey, child: _buildProjectsPanel()),
+                  ],
+                )
+              : Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Expanded(
+                      flex: 6,
+                      child: Container(
+                        key: _projectsKey,
+                        child: _buildProjectsPanel(),
+                      ),
                     ),
-                  ),
-                  const SizedBox(width: 50),
-                  Expanded(
-                    flex: 5,
-                    child: Container(
-                      key: _skillsKey,
-                      child: _buildSkillsPanel(),
+                    const SizedBox(width: 40),
+                    Expanded(
+                      flex: 5,
+                      child: Container(
+                        key: _skillsKey,
+                        child: _buildSkillsPanel(),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-      ),
+                  ],
+                ),
+        );
+      },
     );
   }
 
