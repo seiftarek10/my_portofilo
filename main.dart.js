@@ -10571,7 +10571,7 @@ case 4:s=l.a
 s===$&&A.a()
 s=A.b8(s,200)
 r=A.b8(A.VF(l,B.mt,B.F7),24)
-q=A.b8(A.VF(l,B.mt,B.FJ),32)
+q=A.b8(A.VF(l,B.mt,B.FK),32)
 p=A.b8(l.a,10)
 o=A.b8(l.a,12)
 l.d===$&&A.a()
@@ -17792,7 +17792,7 @@ r.toString
 A.fZ(r)
 q=a.j(0,"swipeEdge")
 q.toString
-return new A.kR(s,r,B.Fu[A.fu(q)])},
+return new A.kR(s,r,B.Fv[A.fu(q)])},
 yh:function yh(a,b){this.a=a
 this.b=b},
 kR:function kR(a,b,c){this.a=a
@@ -19248,7 +19248,7 @@ if(a.as!==q)return q?-1:1
 return 0},
 awv(a,b){var s=A.a0(b).h("a2<1,cR>")
 s=A.V(new A.a2(b,new A.VO(),s),s.h("al.E"))
-return A.aw0(!0,s,a,B.FZ,!0,B.BM,null)},
+return A.aw0(!0,s,a,B.G_,!0,B.BM,null)},
 aiT(a){var s
 try{a.d2()}catch(s){a.HS()}a.w=B.Tz
 try{a.aT(A.aEp())}catch(s){}},
@@ -19763,7 +19763,7 @@ _.as=!0
 _.at=!1
 _.$ti=d},
 aja(a,b){var s
-if(a.i(0,b))return new A.DO(B.G_)
+if(a.i(0,b))return new A.DO(B.G0)
 s=A.c([],t.fJ)
 A.bO()
 a.m8(new A.Yn(b,A.av(t.u),s))
@@ -24594,7 +24594,7 @@ qS(){var s=this.Q
 s===$&&A.a()
 return s},
 qT(a,b,c,d){var s,r,q,p
-if(a<0||b<0)return B.G0
+if(a<0||b<0)return B.G1
 s=this.a
 s===$&&A.a()
 s=s.a
@@ -24613,7 +24613,7 @@ l.push(new A.e6(n[0],n[1],n[2],n[3],B.iQ[m]))}return l},
 cZ(a){var s,r,q=this.a
 q===$&&A.a()
 s=q.a.getGlyphPositionAtCoordinate(a.a,a.b)
-r=B.Fw[J.a3(s.affinity.value)]
+r=B.Fx[J.a3(s.affinity.value)]
 return new A.aj(J.a3(s.pos),r)},
 Eu(a){var s=this.a
 s===$&&A.a()
@@ -24852,7 +24852,7 @@ i(a,b){if(b==null)return!1
 if(!(b instanceof A.uU))return!1
 return b.d===this.d&&b.b==this.b&&A.fx(b.c,this.c)},
 gt(a){var s=this,r=s.c
-return A.H(s.d,s.a,s.b,A.bh(r==null?B.FY:r),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
+return A.H(s.d,s.a,s.b,A.bh(r==null?B.FZ:r),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
 $ifd:1}
 A.tV.prototype={
 Ms(a,b){var s=this.Hq(a),r=A.aE(new A.TV(this,b,s))
@@ -25110,7 +25110,7 @@ A.m6.prototype={
 G(){return"CanvasKitVariant."+this.b}}
 A.WB.prototype={
 glj(){var s=this.b,r=s==null?null:s.canvasKitVariant
-return A.awF(B.FD,r==null?"auto":r)},
+return A.awF(B.FE,r==null?"auto":r)},
 gAQ(){var s,r=this.b
 if(r==null)s=null
 else{r=r.canvasKitMaximumSurfaces
@@ -29966,7 +29966,7 @@ if(m.f!==B.m8){m.f=B.m8
 m.Jw()}}return m.d.a.Sn(a)},
 Jw(){var s,r
 for(s=this.w,r=0;r<s.length;++r)s[r].$1(this.f)},
-Sm(a){if(B.b.v(B.FN,a))return this.f===B.fb
+Sm(a){if(B.b.v(B.FO,a))return this.f===B.fb
 return!1}}
 A.Wi.prototype={
 $0(){return new A.hK(Date.now(),0,!1)},
@@ -36674,7 +36674,7 @@ if(o>0)return s
 return null}}
 A.a9D.prototype={
 D(a,b){this.Hn(b,0,b.length,!1)},
-bn(){this.Hn(B.FR,0,0,!0)}}
+bn(){this.Hn(B.FS,0,0,!0)}}
 A.agq.prototype={
 Hn(a,b,c,d){var s=this.b.aaa(a,b,c,d)
 if(s!=null)this.a.lg(s,0,s.length,d)}}
@@ -39656,7 +39656,7 @@ r=A.ws(B.Jz,B.h,r==null?1:r)
 r.toString
 q=p.a8(q.gu())
 if(q==null)q=1
-return A.a8c(A.aow(null,B.p,new A.pK(q,B.Fs,new A.cW(B.yJ,this.e)),s,1,B.Nm),r)}}
+return A.a8c(A.aow(null,B.p,new A.pK(q,B.Ft,new A.cW(B.yJ,this.e)),s,1,B.Nm),r)}}
 A.Cl.prototype={
 l(){var s=this,r=s.bu$
 if(r!=null)r.N(s.ghI())
@@ -42746,7 +42746,7 @@ n=o.e
 o=o.cx
 r=q.ga2z()
 q.a.toString
-return new A.z8(p,p,p,new A.acM(),p,p,p,p,p,n,B.IB,p,p,p,B.G2,q.ga2G(),o,p,B.Qb,s,p,r,p,p,B.ms,!1,!1,p,p,p,new A.mF(q,t.bT))},
+return new A.z8(p,p,p,new A.acM(),p,p,p,p,p,n,B.IB,p,p,p,B.G3,q.ga2G(),o,p,B.Qb,s,p,r,p,p,B.ms,!1,!1,p,p,p,new A.mF(q,t.bT))},
 L(a){var s,r=this.Xx(a)
 this.a.toString
 s=this.d
@@ -42846,7 +42846,7 @@ A.rd.prototype={
 G(){return"_CornerId."+this.b}}
 A.jI.prototype={}
 A.pM.prototype={
-j9(){var s,r,q,p=this,o=A.aD9(B.FH,new A.a0y(p,p.b.gaK().a5(0,p.a.gaK()))),n=p.a
+j9(){var s,r,q,p=this,o=A.aD9(B.FI,new A.a0y(p,p.b.gaK().a5(0,p.a.gaK()))),n=p.a
 n.toString
 s=o.a
 r=p.mC(n,s)
@@ -45227,7 +45227,7 @@ $3(a,b,c){return new A.lH(b,this.a,!1,c,null)},
 $S:99}
 A.GW.prototype={
 X6(a){var s=t.Tr
-s=A.V(new A.a2(B.FG,new A.a1O(a),s),s.h("al.E"))
+s=A.V(new A.a2(B.FH,new A.a1O(a),s),s.h("al.E"))
 return s},
 i(a,b){if(b==null)return!1
 if(this===b)return!0
@@ -49315,7 +49315,7 @@ Rt(a){var s=this.b,r=s.a.c.Eu(a.a5(0,s.gfO()))
 if(r==null||s.gfO().i(0,B.h))return r
 return new A.km(r.a.dq(s.gfO()),r.b,r.c)},
 uh(){var s,r,q=this.b,p=q.gfO()
-if(!isFinite(p.a)||!isFinite(p.b))return B.G1
+if(!isFinite(p.a)||!isFinite(p.b))return B.G2
 s=q.f
 if(s==null){s=q.a.c.uh()
 q.f=s}if(p.i(0,B.h))r=s
@@ -57589,7 +57589,7 @@ break
 case 1:return A.N(q,r)}})
 return A.O($async$yP,r)},
 ZG(a,b){var s,r,q,p
-if(a===b)return B.FX
+if(a===b)return B.FY
 s=A.c([],t.QP)
 if(a==null)s.push(b)
 else{r=B.b.kA(B.dJ,a)
@@ -59066,7 +59066,7 @@ A.kS.prototype={}
 A.Hm.prototype={
 jw(a,b){var s,r,q,p,o,n=$.a6.ak$.d.c
 if(n==null||n.e==null)return!1
-for(s=t.r,r=0;r<2;++r){q=B.FO[r]
+for(s=t.r,r=0;r<2;++r){q=B.FP[r]
 p=n.e
 p.toString
 o=A.air(p,q,s)
@@ -62588,7 +62588,7 @@ i(a,b){var s=this
 if(b==null)return!1
 if(J.K(b)!==A.o(s))return!1
 return b instanceof A.c0&&b.a===s.a&&b.b==s.b&&b.d===s.d&&A.cB(null,null)},
-gt(a){return A.H(this.a,this.b,null,this.d,A.bh(B.FS),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
+gt(a){return A.H(this.a,this.b,null,this.d,A.bh(B.FT),B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a,B.a)},
 k(a){return"IconData(U+"+B.d.qz(B.i.kI(this.a,16).toUpperCase(),5,"0")+")"}}
 A.vn.prototype={
 bP(a){return!this.w.i(0,a.w)},
@@ -63573,7 +63573,7 @@ b=r?a1:a3.fr
 if(b==null)b=a2.b.c.z
 a3=r?a1:a3.fx
 if(a3==null)a3=a2.b.c.Q
-a=new A.w6(a4,s,q,p,m,o,n,a5,g===!0,a6,a7,i,h,l,k,j,f,new A.pg(a1),B.FV,e===!0,d,c,b,a3,A.axP(a2))
+a=new A.w6(a4,s,q,p,m,o,n,a5,g===!0,a6,a7,i,h,l,k,j,f,new A.pg(a1),B.FW,e===!0,d,c,b,a3,A.axP(a2))
 if(!a.i(0,a0.e))a0.ao(new A.ad2(a0,a))},
 uB(){if(this.d==null)this.n_()},
 NI(){this.n_()},
@@ -63886,7 +63886,7 @@ r.O(0,s.QJ(null,l))
 l.a.toString
 q=r.a
 p=0
-for(;!1;++p){o=B.FT[p]
+for(;!1;++p){o=B.FU[p]
 n=l.c
 n.toString
 m=new A.fs(o.Bg(n),null,!0,B.kj,B.bi,new A.ox(new ($.St())(B.bi)),B.bi)
@@ -64231,7 +64231,7 @@ L(a){var s,r,q=this,p=null,o=q.ga0D(),n=A.pr(a),m=q.bt$,l=q.d
 l===$&&A.a()
 s=q.a.ay
 if(l.gbL()==null){r=q.gGp()
-r=J.pA(r.slice(0),A.a0(r).c)}else r=B.FU
+r=J.pA(r.slice(0),A.a0(r).c)}else r=B.FV
 return new A.mH(p,new A.dg(new A.a1p(q,a),A.vT(B.bp,new A.Dd(!1,A.aiX(A.pq(!0,p,A.a8p(m,new A.pW(r,s,l)),p,p,p,q.y,!1,p,p,p,p,p,!0),n),p),o,q.ga30(),p,p,o),p,t.w3),p)}}
 A.a1o.prototype={
 $1(a){var s=this.a.c
@@ -70213,7 +70213,7 @@ r.tN()
 return s.aI()},
 l(){var s,r,q,p,o=this
 for(s=o.b,r=s.length,q=o.gyR(),p=0;p<s.length;s.length===r||(0,A.u)(s),++p)s[p].N(q)
-o.b=B.FW
+o.b=B.FX
 o.y=!1
 o.eu()},
 cc(a,b){return a.ds(b)},
@@ -73236,12 +73236,12 @@ m=A.oU(A.cc(l,new A.E7(A.anb("assets/images/seif.png",new A.adK(),B.z0),l),B.p,l
 return A.cc(l,s?A.dy(A.c([m,B.Nu,n],o),B.a7,B.B,B.H):A.fR(A.c([A.iQ(n,6),A.iQ(m,4)],o),B.a7,B.j6,B.H),B.p,l,l,l,l,l,l,l,B.Cd,l,l,1/0)},
 GH(){return A.dy(A.c([this.my("\u26a1 CORE_SKILLSET_MATRICES"),A.anJ(new A.adN(),9,B.Je,B.aU,!0)],t.p),B.S,B.B,B.H)},
 GF(){var s=A.c([this.my("\ud83d\udcc2 CAPTAIN_PRODUCTION_WORK")],t.p)
-B.b.O(s,new A.a2(B.G7,new A.adL(this),t.aK))
+B.b.O(s,new A.a2(B.Fd,new A.adL(this),t.aK))
 return A.dy(s,B.S,B.B,B.H)},
 Xm(){var s,r=this.my("\ud83d\udee0\ufe0f CORE APPLICATION SYSTEMS MATRIX"),q=t.hk,p=q.h("al.E"),o=A.V(new A.a2(B.Gn,new A.adH(),q),p)
 o=A.a8V(B.bT,o,25,25)
 s=this.my("\ud83d\ude80 DEPLOYMENT SYSTEMS ENGINE")
-q=A.V(new A.a2(B.Fg,new A.adI(),q),p)
+q=A.V(new A.a2(B.Fh,new A.adI(),q),p)
 return new A.cp(B.cC,A.dy(A.c([r,B.xv,o,B.Ns,s,B.xv,A.a8V(B.bT,q,25,25)],t.p),B.S,B.B,B.H),null)},
 Xl(){var s=null,r=B.l5.d8(0.4),q=A.eg(28),p=A.fz(B.au.d8(0.4),1.5),o=this.my("\ud83d\udcde CONTACT ME"),n=t.Fh
 n=A.V(new A.a2(B.Gy,new A.adG(this),n),n.h("al.E"))
@@ -73278,7 +73278,7 @@ A.adK.prototype={
 $3(a,b,c){return B.Ds},
 $S:470}
 A.adN.prototype={
-$2(a,b){return new A.hP(new A.vw(B.Ff[b],null),!1,null)},
+$2(a,b){return new A.hP(new A.vw(B.Fg[b],null),!1,null)},
 $S:471}
 A.adL.prototype={
 $1(a){return new A.hP(new A.wN(a,this.a.ga2r(),null),!0,null)},
@@ -76140,8 +76140,8 @@ B.cj=new A.yN(0,"clamp")
 B.dn=new A.y(1,0.023529411764705882,0.03529411764705882,0.054901960784313725,B.f)
 B.B5=new A.y(1,0.047058823529411764,0.06666666666666667,0.10980392156862745,B.f)
 B.AE=new A.y(1,0.01568627450980392,0.03137254901960784,0.0784313725490196,B.f)
-B.Fo=s([B.dn,B.B5,B.AE],t.t_)
-B.E9=new A.mX(B.cq,B.yA,B.cj,B.Fo,null,null)
+B.Fp=s([B.dn,B.B5,B.AE],t.t_)
+B.E9=new A.mX(B.cq,B.yA,B.cj,B.Fp,null,null)
 B.z_=new A.bY(null,null,null,null,null,B.E9,B.Y)
 B.z0=new A.DE(1,"contain")
 B.z1=new A.DE(2,"cover")
@@ -76362,7 +76362,7 @@ B.zY=new A.a8s()
 B.a4=new A.a8v()
 B.bY=new A.a8x()
 B.d_=new A.JW(0,0,0,0)
-B.FV=s([],A.ak("x<aFS>"))
+B.FW=s([],A.ak("x<aFS>"))
 B.UD=new A.a8C()
 B.aH={}
 B.rx=new A.ap(B.aH,[],t.l)
@@ -76897,10 +76897,10 @@ B.mp=new A.vQ(3,"endOfText")
 B.ES=s([B.j,B.au,B.de],t.t_)
 B.E8=new A.mX(B.ev,B.ks,B.cj,B.ES,null,null)
 B.Ea=new A.vS(null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null)
-B.FI=s([1373.2198709594231,-1100.4251190754821,-7.278681089101213],t.n)
-B.Fr=s([-271.815969077903,559.6580465940733,-32.46047482791194],t.n)
+B.FJ=s([1373.2198709594231,-1100.4251190754821,-7.278681089101213],t.n)
+B.Fs=s([-271.815969077903,559.6580465940733,-32.46047482791194],t.n)
 B.GA=s([1.9622899599665666,-57.173814538844006,308.7233197812385],t.n)
-B.Ef=s([B.FI,B.Fr,B.GA],t.zg)
+B.Ef=s([B.FJ,B.Fs,B.GA],t.zg)
 B.EF=s([4,9,14,19],t.t)
 B.Gh=s([137,80,78,71,13,10,26,10],t.Z)
 B.Dz=new A.kp(0,"png")
@@ -76908,8 +76908,8 @@ B.DH=new A.hS(B.Dz,!1,0,"png")
 B.Dx=new A.j1(B.Gh,B.DH,0,"png")
 B.Gj=s([71,73,70,56,55,97],t.Z)
 B.Dw=new A.j1(B.Gj,B.fe,1,"gif87a")
-B.FF=s([71,73,70,56,57,97],t.Z)
-B.Dv=new A.j1(B.FF,B.fe,2,"gif89a")
+B.FG=s([71,73,70,56,57,97],t.Z)
+B.Dv=new A.j1(B.FG,B.fe,2,"gif89a")
 B.Eg=s([255,216,255],t.Z)
 B.DA=new A.kp(2,"jpeg")
 B.DL=new A.hS(B.DA,!1,3,"jpeg")
@@ -76924,10 +76924,10 @@ B.EH=s([B.Dx,B.Dw,B.Dv,B.Dy,B.Du,B.Dt],A.ak("x<j1>"))
 B.kk=new A.Bb(0,"named")
 B.ys=new A.Bb(1,"anonymous")
 B.EQ=s([B.kk,B.ys],A.ak("x<Bb>"))
-B.Ft=s([0.41233895,0.35762064,0.18051042],t.n)
+B.Fu=s([0.41233895,0.35762064,0.18051042],t.n)
 B.F9=s([0.2126,0.7152,0.0722],t.n)
 B.Gt=s([0.01932141,0.11916382,0.95034478],t.n)
-B.c4=s([B.Ft,B.F9,B.Gt],t.zg)
+B.c4=s([B.Fu,B.F9,B.Gt],t.zg)
 B.mq=s([0,4,12,1,5,13,3,7,15],t.t)
 B.bQ=new A.jw(0,"left")
 B.cV=new A.jw(1,"right")
@@ -76936,20 +76936,70 @@ B.eh=new A.jw(3,"justify")
 B.ax=new A.jw(4,"start")
 B.h7=new A.jw(5,"end")
 B.F2=s([B.bQ,B.cV,B.ch,B.eh,B.ax,B.h7],A.ak("x<jw>"))
-B.Fd=s([2,1.13276676],t.n)
+B.Fe=s([2,1.13276676],t.n)
 B.Ei=s([2.18349805,1.20311921],t.n)
-B.G6=s([2.33888662,1.28698796],t.n)
+B.G7=s([2.33888662,1.28698796],t.n)
 B.G9=s([2.48660575,1.36351941],t.n)
 B.F5=s([2.62226596,1.44717976],t.n)
 B.Fa=s([2.7514899,1.53385819],t.n)
-B.FC=s([3.36298265,1.98288283],t.n)
-B.Fh=s([4.08649929,2.23811846],t.n)
-B.Fv=s([4.85481134,2.47563463],t.n)
+B.FD=s([3.36298265,1.98288283],t.n)
+B.Fi=s([4.08649929,2.23811846],t.n)
+B.Fw=s([4.85481134,2.47563463],t.n)
 B.F8=s([5.62945551,2.72948597],t.n)
-B.Fe=s([6.43023796,2.98020421],t.n)
-B.mr=s([B.Fd,B.Ei,B.G6,B.G9,B.F5,B.Fa,B.FC,B.Fh,B.Fv,B.F8,B.Fe],t.zg)
+B.Ff=s([6.43023796,2.98020421],t.n)
+B.mr=s([B.Fe,B.Ei,B.G7,B.G9,B.F5,B.Fa,B.FD,B.Fi,B.Fw,B.F8,B.Ff],t.zg)
 B.F4=s([B.hx,B.hy],A.ak("x<tC>"))
 B.F7=s([18,15,10,12,15,18,15,12,12],t.n)
+B.jf={name:0,subtitle:1,desc:2,metrics:3,github:4,demo:5,features:6,tags:7,images:8}
+B.Jp={Speed:0,Sync:1,Architecture:2}
+B.Ih=new A.ap(B.Jp,["99%","Realtime","Clean"],t.l)
+B.bt={text:0,icon:1}
+B.ma=new A.c0(62814,"MaterialIcons",!1)
+B.II=new A.ap(B.bt,["Engineered native Quad-Flavor configurations to seamlessly isolate User, Owner environments.",B.ma],t.EU)
+B.mc=new A.c0(63100,"MaterialIcons",!1)
+B.IJ=new A.ap(B.bt,["Integrated secure server-backed Stripe payment gateways handling active Ephemeral keys.",B.mc],t.EU)
+B.me=new A.c0(983518,"MaterialIcons",!1)
+B.IK=new A.ap(B.bt,["Engineered optimized local data persistence synced with Cursor-Based Firestore Pagination.",B.me],t.EU)
+B.Gu=s([B.II,B.IJ,B.IK],t.Mq)
+B.Fq=s(["Product Flavors","Stripe API","Cursor Pagination","Hive Sync"],t.s)
+B.Jn={User:0,Owner:1}
+B.Gb=s(["images/snap_shot/snapshot1.png","/images/snap_shot/snapshot2.png","/images/snap_shot/snapshot3.png","/images/snap_shot/snapshot4.png","/images/snap_shot/snapshot5.png","/images/snap_shot/snapshot6.png","/images/snap_shot/snapshot7.png","/images/snap_shot/snapshot8.png","/images/snap_shot/snapshot9.png"],t.s)
+B.EW=s(["/images/snap_shot/snap_owner1.png","/images/snap_shot/snap_owner2.png","/images/snap_shot/snap_owner3.png","/images/snap_shot/snap_owner4.png"],t.s)
+B.IV=new A.ap(B.Jn,[B.Gb,B.EW],t.VJ)
+B.Iw=new A.ap(B.jf,["snap_shot","Enterprise Multi-Flavor System","A production-grade mobile ecosystem built with a hyper-strict separation of concerns and multi-tenant environment configurations.",B.Ih,"https://github.com/seiftarek10/snap_shot_e-commerce","https://drive.google.com/drive/folders/1QAIacheLYH6CC-hBk6E9JoECYSiUEjpA?usp=sharing",B.Gu,B.Fq,B.IV],t.R)
+B.Jx={"AI Latency":0,Uptime:1,State:2}
+B.Ix=new A.ap(B.Jx,["<200ms","99.9%","Reactive"],t.l)
+B.md=new A.c0(983236,"MaterialIcons",!1)
+B.IL=new A.ap(B.bt,["Built a specialized AI Skin Scan pipeline using Dio Multipart FormData with reactive media compression.",B.md],t.EU)
+B.D3=new A.c0(62817,"MaterialIcons",!1)
+B.IM=new A.ap(B.bt,["Managed complex lifecycle states of live medical inquiries utilizing highly responsive Cubits.",B.D3],t.EU)
+B.Dk=new A.c0(983670,"MaterialIcons",!1)
+B.IH=new A.ap(B.bt,["Integrated seamless, low-latency virtual consultations directly inside the app using Zoom SDK.",B.Dk],t.EU)
+B.Fb=s([B.IL,B.IM,B.IH],t.Mq)
+B.FF=s(["AI Pipeline","REST APIs","Zoom SDK","Cubit Flow"],t.s)
+B.Jq={Patient:0,Doctor:1,Lab:2}
+B.G4=s(["/images/derma_byte/patient/patient1.png","/images/derma_byte/patient/patient2.png","/images/derma_byte/patient/patient3.png","/images/derma_byte/patient/patient4.png","/images/derma_byte/patient/patient5.png","/images/derma_byte/patient/patient6.png","/images/derma_byte/patient/patient7.png","/images/derma_byte/patient/patient8.png","/images/derma_byte/patient/patient9.png","/images/derma_byte/patient/patient10.png","/images/derma_byte/patient/patient11.png","/images/derma_byte/patient/patient12.png","/images/derma_byte/patient/patient13.png","/images/derma_byte/patient/patient14.png","/images/derma_byte/patient/patient15.png"],t.s)
+B.Ed=s(["/images/derma_byte/doctor/doctor1.png","/images/derma_byte/doctor/doctor2.png","/images/derma_byte/doctor/doctor3.png","/images/derma_byte/doctor/doctor4.png","/images/derma_byte/doctor/doctor5.png","/images/derma_byte/doctor/doctor6.png","/images/derma_byte/doctor/doctor7.png","/images/derma_byte/doctor/doctor8.png","/images/derma_byte/doctor/doctor9.png","/images/derma_byte/doctor/doctor10.png","/images/derma_byte/doctor/doctor11.png","/images/derma_byte/doctor/doctor12.png"],t.s)
+B.Ec=s(["/images/derma_byte/lab/lab1.png","/images/derma_byte/lab/lab2.png","/images/derma_byte/lab/lab3.png","/images/derma_byte/lab/lab4.png","/images/derma_byte/lab/lab5.png","/images/derma_byte/lab/lab6.png","/images/derma_byte/lab/lab7.png"],t.s)
+B.ID=new A.ap(B.Jq,[B.G4,B.Ed,B.Ec],t.VJ)
+B.Iv=new A.ap(B.jf,["DermaByte","AI-Powered Telehealth Platform","An advanced smart medical system bridging patients, expert doctors, and external testing labs in real-time.",B.Ix,"https://github.com/seiftarek10/DermaByte","https://www.youtube.com/watch?v=h4vKXcJtQYc",B.Fb,B.FF,B.ID],t.R)
+B.Ju={"Cart Lag":0,"DB Read":1,UX:2}
+B.If=new A.ap(B.Ju,["0ms","Binary","Adaptive"],t.l)
+B.Dh=new A.c0(983409,"MaterialIcons",!1)
+B.IF=new A.ap(B.bt,["Designed a lightning-fast Dynamic Local Cart operating entirely in-memory using highly-indexed Hive Boxes.",B.Dh],t.EU)
+B.D4=new A.c0(63052,"MaterialIcons",!1)
+B.IG=new A.ap(B.bt,["Synchronized menu catalogs and kitchen preparation states instantly via Firestore Document Streams.",B.D4],t.EU)
+B.De=new A.c0(983176,"MaterialIcons",!1)
+B.IE=new A.ap(B.bt,["Crafted an adaptive layout adapting perfectly to cross-platform Delivery and In-Store Pickup schemes.",B.De],t.EU)
+B.Gw=s([B.IF,B.IG,B.IE],t.Mq)
+B.FN=s(["Firestore Streams","Hive Caching","Reactive UI","Web/Mobile"],t.s)
+B.Jr={User:0,Staff:1,Owner:2}
+B.Gi=s(["/images/coffee_oassis/user/coffee_user1.png","/images/coffee_oassis/user/coffee_user2.png","/images/coffee_oassis/user/coffee_user3.png","/images/coffee_oassis/user/coffee_user4.png","/images/coffee_oassis/user/coffee_user5.png","/images/coffee_oassis/user/coffee_user6.png","/images/coffee_oassis/user/coffee_user7.png"],t.s)
+B.Ge=s(["/images/coffee_oassis/staff/coffee_staff1.png","/images/coffee_oassis/staff/coffee_staff2.png","/images/coffee_oassis/staff/coffee_staff3.png","/images/coffee_oassis/staff/coffee_staff4.png"],t.s)
+B.EE=s(["/images/coffee_oassis/owner/coffee_owner1.png","/images/coffee_oassis/owner/coffee_owner2.png","/images/coffee_oassis/owner/coffee_owner3.png","/images/coffee_oassis/owner/coffee_owner4.png","/images/coffee_oassis/owner/coffee_owner5.png"],t.s)
+B.Iy=new A.ap(B.Jr,[B.Gi,B.Ge,B.EE],t.VJ)
+B.Iu=new A.ap(B.jf,["Coffee Oasis","Realtime Reactive Commerce Engine","A hyper-fast local commerce engine powering instant cart updates and synchronized live order flows.",B.If,"https://github.com/seiftarek10/CoffeeOasis","https://drive.google.com/drive/folders/1_Mx0Dl6ByG6vOxEgssz7Or9SZFmssE6m?usp=drive_link",B.Gw,B.FN,B.Iy],t.R)
+B.Fd=s([B.Iw,B.Iv,B.Iu],t.H7)
 B.GB=new A.mZ("en",null,"US")
 B.ms=s([B.GB],t.ss)
 B.mt=s([0,41,61,101,131,181,251,301,360],t.n)
@@ -76966,19 +77016,16 @@ B.Ia=new A.ap(B.bu,["REST APIs & Interceptors","Advanced network orchestration v
 B.Dj=new A.c0(983556,"MaterialIcons",!1)
 B.Al=new A.y(1,0.9372549019607843,0.26666666666666666,0.26666666666666666,B.f)
 B.I7=new A.ap(B.bu,["Firestore Live Streams","Constructing dynamic real-time client listeners synchronized flawlessly with local entities.",B.Dj,B.Al],t.R)
-B.me=new A.c0(983518,"MaterialIcons",!1)
 B.Ba=new A.y(1,0.9254901960784314,0.2823529411764706,0.6,B.f)
 B.Ic=new A.ap(B.bu,["Hive Binary Caching","Ultra-fast local disk memory pipelines utilizing highly compressed binary custom adapters.",B.me,B.Ba],t.R)
 B.D7=new A.c0(63379,"MaterialIcons",!1)
 B.Ax=new A.y(1,0.0784313725490196,0.7215686274509804,0.6509803921568628,B.f)
 B.Id=new A.ap(B.bu,["Cursor-Based Pagination","Heavy-duty infinite data streaming management without impacting system memory heaps.",B.D7,B.Ax],t.R)
-B.ma=new A.c0(62814,"MaterialIcons",!1)
 B.AF=new A.y(1,0.6588235294117647,0.3333333333333333,0.9686274509803922,B.f)
 B.Ie=new A.ap(B.bu,["Multi-Flavor Build Pipelines","Natively partitioning single-codebase builds for User, Owner, Staff, and Delivery modes.",B.ma,B.AF],t.R)
-B.mc=new A.c0(63100,"MaterialIcons",!1)
 B.Bj=new A.y(1,0.054901960784313725,0.6470588235294118,0.9137254901960784,B.f)
 B.Ib=new A.ap(B.bu,["Stripe & PayPal SDKs","Enforcing secure client-side token registration combined with backend ephemeral handshakes.",B.mc,B.Bj],t.R)
-B.Ff=s([B.I8,B.I6,B.I9,B.Ia,B.I7,B.Ic,B.Id,B.Ie,B.Ib],t.H7)
+B.Fg=s([B.I8,B.I6,B.I9,B.Ia,B.I7,B.Ic,B.Id,B.Ie,B.Ib],t.H7)
 B.TA=new A.jJ(0,0)
 B.TF=new A.jJ(1,0.05)
 B.TD=new A.jJ(3,0.08)
@@ -76991,29 +77038,29 @@ B.Dg=new A.c0(983398,"MaterialIcons",!1)
 B.IO=new A.ap(B.cK,["Automated Flutter Flavors","Targeting different bundle IDs, app icons, Firebase projects, and API base URLs dynamically from a single terminal script.",B.Dg],t.R)
 B.Di=new A.c0(983539,"MaterialIcons",!1)
 B.IR=new A.ap(B.cK,["Multi-Role UI Injection System","Dynamic core presentation layout switching based on authenticated user role states (User, Owner, Staff, Delivery).",B.Di],t.R)
-B.Fg=s([B.IO,B.IR],t.H7)
+B.Fh=s([B.IO,B.IR],t.H7)
 B.mv=s([0,21,51,121,151,191,271,321,360],t.n)
-B.Fq=s([-1,0,0,1,0,0,-1,0,1,0,0,0,-1,1,0,1,1,1,1,0],t.n)
+B.Fr=s([-1,0,0,1,0,0,-1,0,1,0,0,0,-1,1,0,1,1,1,1,0],t.n)
 B.yH=new A.DA(2,"outer")
 B.l3=new A.y(0.09803921568627451,0,0,0,B.f)
 B.h=new A.h(0,0)
 B.z3=new A.d_(0.2,B.yH,B.l3,B.h,11)
-B.Fs=s([B.z3],t.sq)
+B.Ft=s([B.z3],t.sq)
 B.xG=new A.yh(0,"left")
 B.xH=new A.yh(1,"right")
-B.Fu=s([B.xG,B.xH],A.ak("x<yh>"))
+B.Fv=s([B.xG,B.xH],A.ak("x<yh>"))
 B.aw=new A.yt(0,"upstream")
 B.m=new A.yt(1,"downstream")
-B.Fw=s([B.aw,B.m],A.ak("x<yt>"))
+B.Fx=s([B.aw,B.m],A.ak("x<yt>"))
 B.a8=new A.yx(0,"rtl")
 B.I=new A.yx(1,"ltr")
 B.iQ=s([B.a8,B.I],A.ak("x<yx>"))
 B.A6=new A.m6(0,"auto")
 B.A7=new A.m6(1,"full")
 B.A8=new A.m6(2,"chromium")
-B.FD=s([B.A6,B.A7,B.A8,B.bZ],A.ak("x<m6>"))
+B.FE=s([B.A6,B.A7,B.A8,B.bZ],A.ak("x<m6>"))
 B.aR=new A.e5(1,"fuchsia")
-B.FG=s([B.V,B.aR,B.K,B.aJ,B.aK,B.aL],A.ak("x<e5>"))
+B.FH=s([B.V,B.aR,B.K,B.aJ,B.aK,B.aL],A.ak("x<e5>"))
 B.ya=new A.rd(0,"topLeft")
 B.yd=new A.rd(3,"bottomRight")
 B.Tv=new A.jI(B.ya,B.yd)
@@ -77022,87 +77069,40 @@ B.yb=new A.rd(1,"topRight")
 B.yc=new A.rd(2,"bottomLeft")
 B.Tw=new A.jI(B.yb,B.yc)
 B.Tx=new A.jI(B.yc,B.yb)
-B.FH=s([B.Tv,B.Ty,B.Tw,B.Tx],A.ak("x<jI>"))
-B.FJ=s([35,30,20,25,30,35,30,25,25],t.n)
-B.FN=s(["click","scroll"],t.s)
+B.FI=s([B.Tv,B.Ty,B.Tw,B.Tx],A.ak("x<jI>"))
+B.FK=s([35,30,20,25,30,35,30,25,25],t.n)
+B.FO=s(["click","scroll"],t.s)
 B.z9=new A.oJ()
 B.ju=new A.Iq(1,"page")
 B.jv=new A.eP(B.aD,B.ju)
-B.FO=s([B.z9,B.jv],A.ak("x<aR>"))
-B.FX=s([],t.QP)
+B.FP=s([B.z9,B.jv],A.ak("x<aR>"))
+B.FY=s([],t.QP)
 B.my=s([],A.ak("x<aFC>"))
-B.FZ=s([],t.E)
-B.G_=s([],t.fJ)
-B.G1=s([],t.ER)
-B.G2=s([],t.tc)
+B.G_=s([],t.E)
+B.G0=s([],t.fJ)
+B.G2=s([],t.ER)
+B.G3=s([],t.tc)
 B.fk=s([],t.jl)
-B.FU=s([],t.wi)
-B.FT=s([],A.ak("x<aoa<@>>"))
+B.FV=s([],t.wi)
+B.FU=s([],A.ak("x<aoa<@>>"))
 B.iS=s([],t.AO)
-B.FW=s([],t.D1)
+B.FX=s([],t.D1)
 B.iR=s([],t.QF)
 B.mw=s([],t.s)
-B.G0=s([],t.Lx)
+B.G1=s([],t.Lx)
 B.UM=s([],t.p)
-B.FY=s([],t.n)
-B.FR=s([],t.t)
+B.FZ=s([],t.n)
+B.FS=s([],t.t)
 B.mx=s([],t.ee)
-B.FS=s([],t.XS)
-B.jf={name:0,subtitle:1,desc:2,metrics:3,github:4,demo:5,features:6,tags:7,images:8}
-B.Jp={Speed:0,Sync:1,Architecture:2}
-B.Ih=new A.ap(B.Jp,["99%","Realtime","Clean"],t.l)
-B.bt={text:0,icon:1}
-B.II=new A.ap(B.bt,["Engineered native Quad-Flavor configurations to seamlessly isolate User, Owner environments.",B.ma],t.EU)
-B.IJ=new A.ap(B.bt,["Integrated secure server-backed Stripe payment gateways handling active Ephemeral keys.",B.mc],t.EU)
-B.IK=new A.ap(B.bt,["Engineered optimized local data persistence synced with Cursor-Based Firestore Pagination.",B.me],t.EU)
-B.Gu=s([B.II,B.IJ,B.IK],t.Mq)
-B.Fp=s(["Product Flavors","Stripe API","Cursor Pagination","Hive Sync"],t.s)
-B.Jn={User:0,Owner:1}
-B.Gb=s(["images/snap_shot/snapshot1.png","/images/snap_shot/snapshot2.png","/images/snap_shot/snapshot3.png","/images/snap_shot/snapshot4.png","/images/snap_shot/snapshot5.png","/images/snap_shot/snapshot6.png","/images/snap_shot/snapshot7.png","/images/snap_shot/snapshot8.png","/images/snap_shot/snapshot9.png"],t.s)
-B.EW=s(["/images/snap_shot/snap_owner1.png","/images/snap_shot/snap_owner2.png","/images/snap_shot/snap_owner3.png","/images/snap_shot/snap_owner4.png"],t.s)
-B.IV=new A.ap(B.Jn,[B.Gb,B.EW],t.VJ)
-B.Iv=new A.ap(B.jf,["snap_shot","Enterprise Multi-Flavor System","A production-grade mobile ecosystem built with a hyper-strict separation of concerns and multi-tenant environment configurations.",B.Ih,"https://github.com/seiftarek10/snap_shot_e-commerce","https://snap-shot-demo.web.app",B.Gu,B.Fp,B.IV],t.R)
-B.Jx={"AI Latency":0,Uptime:1,State:2}
-B.Ix=new A.ap(B.Jx,["<200ms","99.9%","Reactive"],t.l)
-B.md=new A.c0(983236,"MaterialIcons",!1)
-B.IL=new A.ap(B.bt,["Built a specialized AI Skin Scan pipeline using Dio Multipart FormData with reactive media compression.",B.md],t.EU)
-B.D3=new A.c0(62817,"MaterialIcons",!1)
-B.IM=new A.ap(B.bt,["Managed complex lifecycle states of live medical inquiries utilizing highly responsive Cubits.",B.D3],t.EU)
-B.Dk=new A.c0(983670,"MaterialIcons",!1)
-B.IH=new A.ap(B.bt,["Integrated seamless, low-latency virtual consultations directly inside the app using Zoom SDK.",B.Dk],t.EU)
-B.Fb=s([B.IL,B.IM,B.IH],t.Mq)
-B.FE=s(["AI Pipeline","REST APIs","Zoom SDK","Cubit Flow"],t.s)
-B.Jq={Patient:0,Doctor:1,Lab:2}
-B.G3=s(["/images/derma_byte/patient/patient1.png","/images/derma_byte/patient/patient2.png","/images/derma_byte/patient/patient3.png","/images/derma_byte/patient/patient4.png","/images/derma_byte/patient/patient5.png","/images/derma_byte/patient/patient6.png","/images/derma_byte/patient/patient7.png","/images/derma_byte/patient/patient8.png","/images/derma_byte/patient/patient9.png","/images/derma_byte/patient/patient10.png","/images/derma_byte/patient/patient11.png","/images/derma_byte/patient/patient12.png","/images/derma_byte/patient/patient13.png","/images/derma_byte/patient/patient14.png","/images/derma_byte/patient/patient15.png"],t.s)
-B.Ed=s(["/images/derma_byte/doctor/doctor1.png","/images/derma_byte/doctor/doctor2.png","/images/derma_byte/doctor/doctor3.png","/images/derma_byte/doctor/doctor4.png","/images/derma_byte/doctor/doctor5.png","/images/derma_byte/doctor/doctor6.png","/images/derma_byte/doctor/doctor7.png","/images/derma_byte/doctor/doctor8.png","/images/derma_byte/doctor/doctor9.png","/images/derma_byte/doctor/doctor10.png","/images/derma_byte/doctor/doctor11.png","/images/derma_byte/doctor/doctor12.png"],t.s)
-B.Ec=s(["/images/derma_byte/lab/lab1.png","/images/derma_byte/lab/lab2.png","/images/derma_byte/lab/lab3.png","/images/derma_byte/lab/lab4.png","/images/derma_byte/lab/lab5.png","/images/derma_byte/lab/lab6.png","/images/derma_byte/lab/lab7.png"],t.s)
-B.ID=new A.ap(B.Jq,[B.G3,B.Ed,B.Ec],t.VJ)
-B.Iw=new A.ap(B.jf,["DermaByte","AI-Powered Telehealth Platform","An advanced smart medical system bridging patients, expert doctors, and external testing labs in real-time.",B.Ix,"https://github.com/seiftarek10/DermaByte","https://www.youtube.com/watch?v=h4vKXcJtQYc",B.Fb,B.FE,B.ID],t.R)
-B.Ju={"Cart Lag":0,"DB Read":1,UX:2}
-B.If=new A.ap(B.Ju,["0ms","Binary","Adaptive"],t.l)
-B.Dh=new A.c0(983409,"MaterialIcons",!1)
-B.IF=new A.ap(B.bt,["Designed a lightning-fast Dynamic Local Cart operating entirely in-memory using highly-indexed Hive Boxes.",B.Dh],t.EU)
-B.D4=new A.c0(63052,"MaterialIcons",!1)
-B.IG=new A.ap(B.bt,["Synchronized menu catalogs and kitchen preparation states instantly via Firestore Document Streams.",B.D4],t.EU)
-B.De=new A.c0(983176,"MaterialIcons",!1)
-B.IE=new A.ap(B.bt,["Crafted an adaptive layout adapting perfectly to cross-platform Delivery and In-Store Pickup schemes.",B.De],t.EU)
-B.Gw=s([B.IF,B.IG,B.IE],t.Mq)
-B.FM=s(["Firestore Streams","Hive Caching","Reactive UI","Web/Mobile"],t.s)
-B.Jr={User:0,Staff:1,Owner:2}
-B.Gi=s(["/images/coffee_oassis/user/coffee_user1.png","/images/coffee_oassis/user/coffee_user2.png","/images/coffee_oassis/user/coffee_user3.png","/images/coffee_oassis/user/coffee_user4.png","/images/coffee_oassis/user/coffee_user5.png","/images/coffee_oassis/user/coffee_user6.png","/images/coffee_oassis/user/coffee_user7.png"],t.s)
-B.Ge=s(["/images/coffee_oassis/staff/coffee_staff1.png","/images/coffee_oassis/staff/coffee_staff2.png","/images/coffee_oassis/staff/coffee_staff3.png","/images/coffee_oassis/staff/coffee_staff4.png"],t.s)
-B.EE=s(["/images/coffee_oassis/owner/coffee_owner1.png","/images/coffee_oassis/owner/coffee_owner2.png","/images/coffee_oassis/owner/coffee_owner3.png","/images/coffee_oassis/owner/coffee_owner4.png","/images/coffee_oassis/owner/coffee_owner5.png"],t.s)
-B.Iy=new A.ap(B.Jr,[B.Gi,B.Ge,B.EE],t.VJ)
-B.Iu=new A.ap(B.jf,["Coffee Oasis","Realtime Reactive Commerce Engine","A hyper-fast local commerce engine powering instant cart updates and synchronized live order flows.",B.If,"https://github.com/seiftarek10/CoffeeOasis","https://drive.google.com/drive/folders/1_Mx0Dl6ByG6vOxEgssz7Or9SZFmssE6m?usp=drive_link",B.Gw,B.FM,B.Iy],t.R)
-B.G7=s([B.Iv,B.Iw,B.Iu],t.H7)
+B.FT=s([],t.XS)
 B.Jy=new A.h(0,2)
 B.z2=new A.d_(0.75,B.cr,B.l3,B.Jy,1.5)
 B.Ga=s([B.z2],t.sq)
 B.dJ=s([B.bV,B.bf,B.ew,B.ex,B.hw],t.QP)
 B.EX=s([0.001200833568784504,0.002389694492170889,0.0002795742885861124],t.n)
-B.FP=s([0.0005891086651375999,0.0029785502573438758,0.0003270666104008398],t.n)
+B.FQ=s([0.0005891086651375999,0.0029785502573438758,0.0003270666104008398],t.n)
 B.F6=s([0.00010146692491640572,0.0005364214359186694,0.0032979401770712076],t.n)
-B.Gm=s([B.EX,B.FP,B.F6],t.zg)
+B.Gm=s([B.EX,B.FQ,B.F6],t.zg)
 B.D6=new A.c0(63169,"MaterialIcons",!1)
 B.IQ=new A.ap(B.cK,["Data Layer Caching System","Repository pattern implementation handling local Hive box fallback caching instantly upon remote Firestore stream failure to guarantee 100% offline persistence.",B.D6],t.R)
 B.IS=new A.ap(B.cK,["Domain Use-Case System","Executing completely isolated, single-responsibility Use Cases containing pure business logic with zero Flutter/UI framework dependencies.",B.md],t.R)
@@ -77700,28 +77700,28 @@ B.EL=s([54,null,null,8589935158],t.Z)
 B.EM=s([55,null,null,8589935159],t.Z)
 B.EN=s([56,null,null,8589935160],t.Z)
 B.EP=s([57,null,null,8589935161],t.Z)
-B.Fx=s([8589934852,8589934852,8589934853,null],t.Z)
+B.Fy=s([8589934852,8589934852,8589934853,null],t.Z)
 B.El=s([4294967555,null,4294967555,null],t.Z)
 B.Em=s([4294968065,null,null,8589935154],t.Z)
 B.En=s([4294968066,null,null,8589935156],t.Z)
 B.Eo=s([4294968067,null,null,8589935158],t.Z)
 B.Ep=s([4294968068,null,null,8589935160],t.Z)
 B.Eu=s([4294968321,null,null,8589935157],t.Z)
-B.Fy=s([8589934848,8589934848,8589934849,null],t.Z)
+B.Fz=s([8589934848,8589934848,8589934849,null],t.Z)
 B.Ek=s([4294967423,null,null,8589935150],t.Z)
 B.Eq=s([4294968069,null,null,8589935153],t.Z)
 B.Ej=s([4294967309,null,null,8589935117],t.Z)
 B.Er=s([4294968070,null,null,8589935159],t.Z)
 B.Ev=s([4294968327,null,null,8589935152],t.Z)
-B.Fz=s([8589934854,8589934854,8589934855,null],t.Z)
+B.FA=s([8589934854,8589934854,8589934855,null],t.Z)
 B.Es=s([4294968071,null,null,8589935155],t.Z)
 B.Et=s([4294968072,null,null,8589935161],t.Z)
-B.FA=s([8589934850,8589934850,8589934851,null],t.Z)
-B.rA=new A.d4(["*",B.Ew,"+",B.Ex,"-",B.Ey,".",B.Ez,"/",B.EA,"0",B.EB,"1",B.EC,"2",B.EG,"3",B.EI,"4",B.EJ,"5",B.EK,"6",B.EL,"7",B.EM,"8",B.EN,"9",B.EP,"Alt",B.Fx,"AltGraph",B.El,"ArrowDown",B.Em,"ArrowLeft",B.En,"ArrowRight",B.Eo,"ArrowUp",B.Ep,"Clear",B.Eu,"Control",B.Fy,"Delete",B.Ek,"End",B.Eq,"Enter",B.Ej,"Home",B.Er,"Insert",B.Ev,"Meta",B.Fz,"PageDown",B.Es,"PageUp",B.Et,"Shift",B.FA],A.ak("d4<A,U<q?>>"))
+B.FB=s([8589934850,8589934850,8589934851,null],t.Z)
+B.rA=new A.d4(["*",B.Ew,"+",B.Ex,"-",B.Ey,".",B.Ez,"/",B.EA,"0",B.EB,"1",B.EC,"2",B.EG,"3",B.EI,"4",B.EJ,"5",B.EK,"6",B.EL,"7",B.EM,"8",B.EN,"9",B.EP,"Alt",B.Fy,"AltGraph",B.El,"ArrowDown",B.Em,"ArrowLeft",B.En,"ArrowRight",B.Eo,"ArrowUp",B.Ep,"Clear",B.Eu,"Control",B.Fz,"Delete",B.Ek,"End",B.Eq,"Enter",B.Ej,"Home",B.Er,"Insert",B.Ev,"Meta",B.FA,"PageDown",B.Es,"PageUp",B.Et,"Shift",B.FB],A.ak("d4<A,U<q?>>"))
 B.EO=s([B.mH,null,null,B.rn],t.L)
-B.G4=s([B.r9,null,null,B.ro],t.L)
+B.G5=s([B.r9,null,null,B.ro],t.L)
 B.Fc=s([B.ra,null,null,B.rp],t.L)
-B.FB=s([B.rb,null,null,B.c8],t.L)
+B.FC=s([B.rb,null,null,B.c8],t.L)
 B.Eb=s([B.rc,null,null,B.rq],t.L)
 B.Gk=s([B.rd,null,null,B.j2],t.L)
 B.Gg=s([B.re,null,null,B.dT],t.L)
@@ -77731,26 +77731,26 @@ B.Gf=s([B.rh,null,null,B.ca],t.L)
 B.ET=s([B.ri,null,null,B.j3],t.L)
 B.Eh=s([B.rj,null,null,B.cb],t.L)
 B.F3=s([B.rk,null,null,B.dV],t.L)
-B.G5=s([B.rl,null,null,B.cc],t.L)
+B.G6=s([B.rl,null,null,B.cc],t.L)
 B.G8=s([B.rm,null,null,B.dW],t.L)
 B.EY=s([B.dR,B.dR,B.fr,null],t.L)
 B.Gl=s([B.fn,null,B.fn,null],t.L)
-B.Fi=s([B.b6,null,null,B.c9],t.L)
-B.Fj=s([B.aV,null,null,B.ca],t.L)
-B.Fk=s([B.aW,null,null,B.cb],t.L)
+B.Fj=s([B.b6,null,null,B.c9],t.L)
+B.Fk=s([B.aV,null,null,B.ca],t.L)
+B.Fl=s([B.aW,null,null,B.cb],t.L)
 B.Gr=s([B.b7,null,null,B.cc],t.L)
 B.Gc=s([B.iX,null,null,B.j3],t.L)
 B.EZ=s([B.dQ,B.dQ,B.fq,null],t.L)
-B.FK=s([B.ar,null,null,B.c8],t.L)
-B.Fl=s([B.c5,null,null,B.dT],t.L)
+B.FL=s([B.ar,null,null,B.c8],t.L)
+B.Fm=s([B.c5,null,null,B.dT],t.L)
 B.ER=s([B.fm,null,null,B.j1],t.L)
-B.Fm=s([B.c6,null,null,B.dV],t.L)
+B.Fn=s([B.c6,null,null,B.dV],t.L)
 B.Gd=s([B.dP,null,null,B.j2],t.L)
 B.F_=s([B.dS,B.dS,B.fs,null],t.L)
-B.Fn=s([B.dN,null,null,B.dU],t.L)
-B.FQ=s([B.dO,null,null,B.dW],t.L)
+B.Fo=s([B.dN,null,null,B.dU],t.L)
+B.FR=s([B.dO,null,null,B.dW],t.L)
 B.F0=s([B.c7,B.c7,B.cE,null],t.L)
-B.IC=new A.d4(["*",B.EO,"+",B.G4,"-",B.Fc,".",B.FB,"/",B.Eb,"0",B.Gk,"1",B.Gg,"2",B.EV,"3",B.Gs,"4",B.Gf,"5",B.ET,"6",B.Eh,"7",B.F3,"8",B.G5,"9",B.G8,"Alt",B.EY,"AltGraph",B.Gl,"ArrowDown",B.Fi,"ArrowLeft",B.Fj,"ArrowRight",B.Fk,"ArrowUp",B.Gr,"Clear",B.Gc,"Control",B.EZ,"Delete",B.FK,"End",B.Fl,"Enter",B.ER,"Home",B.Fm,"Insert",B.Gd,"Meta",B.F_,"PageDown",B.Fn,"PageUp",B.FQ,"Shift",B.F0],A.ak("d4<A,U<e?>>"))
+B.IC=new A.d4(["*",B.EO,"+",B.G5,"-",B.Fc,".",B.FC,"/",B.Eb,"0",B.Gk,"1",B.Gg,"2",B.EV,"3",B.Gs,"4",B.Gf,"5",B.ET,"6",B.Eh,"7",B.F3,"8",B.G6,"9",B.G8,"Alt",B.EY,"AltGraph",B.Gl,"ArrowDown",B.Fj,"ArrowLeft",B.Fk,"ArrowRight",B.Fl,"ArrowUp",B.Gr,"Clear",B.Gc,"Control",B.EZ,"Delete",B.FL,"End",B.Fm,"Enter",B.ER,"Home",B.Fn,"Insert",B.Gd,"Meta",B.F_,"PageDown",B.Fo,"PageUp",B.FR,"Shift",B.F0],A.ak("d4<A,U<e?>>"))
 B.Jm={KeyA:0,KeyB:1,KeyC:2,KeyD:3,KeyE:4,KeyF:5,KeyG:6,KeyH:7,KeyI:8,KeyJ:9,KeyK:10,KeyL:11,KeyM:12,KeyN:13,KeyO:14,KeyP:15,KeyQ:16,KeyR:17,KeyS:18,KeyT:19,KeyU:20,KeyV:21,KeyW:22,KeyX:23,KeyY:24,KeyZ:25,Digit1:26,Digit2:27,Digit3:28,Digit4:29,Digit5:30,Digit6:31,Digit7:32,Digit8:33,Digit9:34,Digit0:35,Minus:36,Equal:37,BracketLeft:38,BracketRight:39,Backslash:40,Semicolon:41,Quote:42,Backquote:43,Comma:44,Period:45,Slash:46}
 B.rB=new A.ap(B.Jm,["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","1","2","3","4","5","6","7","8","9","0","-","=","[","]","\\",";","'","`",",",".","/"],t.l)
 B.Ji={Abort:0,Again:1,AltLeft:2,AltRight:3,ArrowDown:4,ArrowLeft:5,ArrowRight:6,ArrowUp:7,AudioVolumeDown:8,AudioVolumeMute:9,AudioVolumeUp:10,Backquote:11,Backslash:12,Backspace:13,BracketLeft:14,BracketRight:15,BrightnessDown:16,BrightnessUp:17,BrowserBack:18,BrowserFavorites:19,BrowserForward:20,BrowserHome:21,BrowserRefresh:22,BrowserSearch:23,BrowserStop:24,CapsLock:25,Comma:26,ContextMenu:27,ControlLeft:28,ControlRight:29,Convert:30,Copy:31,Cut:32,Delete:33,Digit0:34,Digit1:35,Digit2:36,Digit3:37,Digit4:38,Digit5:39,Digit6:40,Digit7:41,Digit8:42,Digit9:43,DisplayToggleIntExt:44,Eject:45,End:46,Enter:47,Equal:48,Escape:49,Esc:50,F1:51,F10:52,F11:53,F12:54,F13:55,F14:56,F15:57,F16:58,F17:59,F18:60,F19:61,F2:62,F20:63,F21:64,F22:65,F23:66,F24:67,F3:68,F4:69,F5:70,F6:71,F7:72,F8:73,F9:74,Find:75,Fn:76,FnLock:77,GameButton1:78,GameButton10:79,GameButton11:80,GameButton12:81,GameButton13:82,GameButton14:83,GameButton15:84,GameButton16:85,GameButton2:86,GameButton3:87,GameButton4:88,GameButton5:89,GameButton6:90,GameButton7:91,GameButton8:92,GameButton9:93,GameButtonA:94,GameButtonB:95,GameButtonC:96,GameButtonLeft1:97,GameButtonLeft2:98,GameButtonMode:99,GameButtonRight1:100,GameButtonRight2:101,GameButtonSelect:102,GameButtonStart:103,GameButtonThumbLeft:104,GameButtonThumbRight:105,GameButtonX:106,GameButtonY:107,GameButtonZ:108,Help:109,Home:110,Hyper:111,Insert:112,IntlBackslash:113,IntlRo:114,IntlYen:115,KanaMode:116,KeyA:117,KeyB:118,KeyC:119,KeyD:120,KeyE:121,KeyF:122,KeyG:123,KeyH:124,KeyI:125,KeyJ:126,KeyK:127,KeyL:128,KeyM:129,KeyN:130,KeyO:131,KeyP:132,KeyQ:133,KeyR:134,KeyS:135,KeyT:136,KeyU:137,KeyV:138,KeyW:139,KeyX:140,KeyY:141,KeyZ:142,KeyboardLayoutSelect:143,Lang1:144,Lang2:145,Lang3:146,Lang4:147,Lang5:148,LaunchApp1:149,LaunchApp2:150,LaunchAssistant:151,LaunchControlPanel:152,LaunchMail:153,LaunchScreenSaver:154,MailForward:155,MailReply:156,MailSend:157,MediaFastForward:158,MediaPause:159,MediaPlay:160,MediaPlayPause:161,MediaRecord:162,MediaRewind:163,MediaSelect:164,MediaStop:165,MediaTrackNext:166,MediaTrackPrevious:167,MetaLeft:168,MetaRight:169,MicrophoneMuteToggle:170,Minus:171,NonConvert:172,NumLock:173,Numpad0:174,Numpad1:175,Numpad2:176,Numpad3:177,Numpad4:178,Numpad5:179,Numpad6:180,Numpad7:181,Numpad8:182,Numpad9:183,NumpadAdd:184,NumpadBackspace:185,NumpadClear:186,NumpadClearEntry:187,NumpadComma:188,NumpadDecimal:189,NumpadDivide:190,NumpadEnter:191,NumpadEqual:192,NumpadMemoryAdd:193,NumpadMemoryClear:194,NumpadMemoryRecall:195,NumpadMemoryStore:196,NumpadMemorySubtract:197,NumpadMultiply:198,NumpadParenLeft:199,NumpadParenRight:200,NumpadSubtract:201,Open:202,PageDown:203,PageUp:204,Paste:205,Pause:206,Period:207,Power:208,PrintScreen:209,PrivacyScreenToggle:210,Props:211,Quote:212,Resume:213,ScrollLock:214,Select:215,SelectTask:216,Semicolon:217,ShiftLeft:218,ShiftRight:219,ShowAllWindows:220,Slash:221,Sleep:222,Space:223,Super:224,Suspend:225,Tab:226,Turbo:227,Undo:228,WakeUp:229,ZoomToggle:230}
@@ -78303,9 +78303,9 @@ B.fX=new A.dp([B.aI,B.bL,B.e3,B.bb,B.bM],t.Lu)
 B.B3=new A.y(0.23529411764705882,0,0,0,B.f)
 B.rO=new A.h(0,4)
 B.z4=new A.d_(0.5,B.cr,B.B3,B.rO,10)
-B.FL=s([B.z4],t.sq)
+B.FM=s([B.z4],t.sq)
 B.Ly=new A.i8(B.kz,B.o)
-B.Mo=new A.hl(null,null,null,B.FL,B.Ly)
+B.Mo=new A.hl(null,null,null,B.FM,B.Ly)
 B.Mp=new A.Z(B.dP,!1,!0,!1,!1,B.k)
 B.x4=new A.Z(B.iV,!1,!1,!1,!0,B.k)
 B.Mq=new A.Z(B.mC,!0,!1,!1,!1,B.k)
@@ -79140,7 +79140,7 @@ return A.c([A.z(A.z(A.a4(),q),"Alphabetic"),A.z(A.z(A.a4(),q),"Ideographic")],t.
 s($,"aJe","auk",()=>{var q="PlaceholderAlignment"
 return A.c([A.z(A.z(A.a4(),q),"Baseline"),A.z(A.z(A.a4(),q),"AboveBaseline"),A.z(A.z(A.a4(),q),"BelowBaseline"),A.z(A.z(A.a4(),q),"Top"),A.z(A.z(A.a4(),q),"Bottom"),A.z(A.z(A.a4(),q),"Middle")],t.O)})
 r($,"aJ4","aud",()=>A.cH().gOy()+"roboto/v32/KFOmCnqEu92Fr1Me4GZLCzYlKw.woff2")
-s($,"aIB","atT",()=>A.ay_(B.Fq))
+s($,"aIB","atT",()=>A.ay_(B.Fr))
 s($,"aIA","aig",()=>A.Zl(A.avp($.atT())))
 s($,"aFV","ck",()=>{var q,p=A.z(A.z(A.lR(),"window"),"screen")
 p=p==null?null:A.z(p,"width")
