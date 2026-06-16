@@ -26,7 +26,7 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
         duration: const Duration(milliseconds: 300),
         curve: Curves.easeInOutCubic,
         margin: const EdgeInsets.only(bottom: 40),
-        padding: const EdgeInsets.all(40),
+     padding: EdgeInsets.all(MediaQuery.of(context).size.width < 600 ? 20 : 40),
         decoration: BoxDecoration(
           color: isHovered
               ? const Color(0xFF121B2C).withValues(alpha: 0.8)

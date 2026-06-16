@@ -85,6 +85,8 @@ class _PortfolioPageState extends State<PortfolioPage> {
 
   @override
   Widget build(BuildContext context) {
+    double screenWidth = MediaQuery.of(context).size.width;
+    bool isMobile = screenWidth < 768;
     return Scaffold(
       backgroundColor: const Color(0xFF06090E),
       body: Container(
@@ -102,7 +104,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                 controller: _scrollController,
                 physics: const BouncingScrollPhysics(),
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
+                  padding: EdgeInsets.symmetric(horizontal: isMobile ? 20 : 50),
                   child: Column(
                     children: [
                       const SizedBox(height: 120),
@@ -134,75 +136,76 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ),
     );
   }
-Widget _buildStickyNavbar() {
-  return Positioned(
-    top: 0,
-    left: 0,
-    right: 0,
-    child: Container(
-      height: 80,
-      // قللنا الـ padding شوية عشان توفر مساحة
-      padding: const EdgeInsets.symmetric(horizontal: 20), 
-      decoration: BoxDecoration(
-        color: const Color(0xFF0D1117).withValues(alpha: 0.8),
-        border: const Border(
-          bottom: BorderSide(color: Color(0xFF1F293D), width: 1.5),
+
+  Widget _buildStickyNavbar() {
+    return Positioned(
+      top: 0,
+      left: 0,
+      right: 0,
+      child: Container(
+        height: 80,
+        // قللنا الـ padding شوية عشان توفر مساحة
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        decoration: BoxDecoration(
+          color: const Color(0xFF0D1117).withValues(alpha: 0.8),
+          border: const Border(
+            bottom: BorderSide(color: Color(0xFF1F293D), width: 1.5),
+          ),
+        ),
+        child: Row(
+          children: [
+            const Text(
+              PortfolioData.name,
+              style: TextStyle(
+                color: Color(0xFF58A6FF),
+                fontFamily: 'Fira Code',
+                fontWeight: FontWeight.w900,
+                fontSize: 20, // صغرتها سيكا عشان توفر مكان
+                letterSpacing: 2,
+              ),
+            ),
+            const SizedBox(width: 20),
+
+            // هنا الحل: Expanded + SingleChildScrollView أفقي
+            Expanded(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    _buildNavButton("Summary", _summaryKey),
+                    _buildNavButton("Projects", _projectsKey),
+                    _buildNavButton("Skills", _skillsKey),
+                    _buildNavButton("Systems", _architectureKey),
+                    _buildNavButton("Contact", _contactKey),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(width: 10),
+            // الأيقونات
+            Row(
+              children: [
+                _buildSocialIconButton(
+                  icon: Icons.code_rounded,
+                  tooltip: "GitHub",
+                  url: "https://github.com/seiftarek10",
+                  hoverColor: const Color(0xFF58A6FF),
+                ),
+                const SizedBox(width: 10),
+                _buildSocialIconButton(
+                  icon: Icons.lan_rounded,
+                  tooltip: "LinkedIn",
+                  url: "https://www.linkedin.com/in/seif-tariq/",
+                  hoverColor: const Color(0xFF0A66C2),
+                ),
+              ],
+            ),
+          ],
         ),
       ),
-      child: Row(
-        children: [
-          const Text(
-            PortfolioData.name,
-            style: TextStyle(
-              color: Color(0xFF58A6FF),
-              fontFamily: 'Fira Code',
-              fontWeight: FontWeight.w900,
-              fontSize: 20, // صغرتها سيكا عشان توفر مكان
-              letterSpacing: 2,
-            ),
-          ),
-          const SizedBox(width: 20),
-          
-          // هنا الحل: Expanded + SingleChildScrollView أفقي
-          Expanded(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  _buildNavButton("Summary", _summaryKey),
-                  _buildNavButton("Projects", _projectsKey),
-                  _buildNavButton("Skills", _skillsKey),
-                  _buildNavButton("Systems", _architectureKey),
-                  _buildNavButton("Contact", _contactKey),
-                ],
-              ),
-            ),
-          ),
-          
-          const SizedBox(width: 10),
-          // الأيقونات
-          Row(
-            children: [
-              _buildSocialIconButton(
-                icon: Icons.code_rounded,
-                tooltip: "GitHub",
-                url: "https://github.com/seiftarek10",
-                hoverColor: const Color(0xFF58A6FF),
-              ),
-              const SizedBox(width: 10),
-              _buildSocialIconButton(
-                icon: Icons.lan_rounded,
-                tooltip: "LinkedIn",
-                url: "https://www.linkedin.com/in/seif-tariq/",
-                hoverColor: const Color(0xFF0A66C2),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ),
-  );
-}
+    );
+  }
 
   Widget _buildNavButton(String title, GlobalKey targetKey) {
     return Padding(
@@ -548,10 +551,13 @@ Widget _buildStickyNavbar() {
           Wrap(
             spacing: 25,
             runSpacing: 25,
+            alignment: WrapAlignment.center,
             children: PortfolioData.architecturalParadigms
                 .map(
                   (paradigm) => Container(
-                    width: 420,
+                    width: MediaQuery.of(context).size.width < 600
+                        ? double.infinity
+                        : 420,
                     padding: const EdgeInsets.all(30),
                     decoration: BoxDecoration(
                       color: const Color(0xFF161B22).withValues(alpha: 0.3),
