@@ -296,7 +296,8 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
             ),
             clipBehavior: Clip.antiAlias,
             child: Image.asset(
-              images[imgIndex],
+              // images[imgIndex],
+              "assets/images/snap_shot/snapshot3.png",
               fit: BoxFit.cover,
               errorBuilder: (context, error, stackTrace) {
                 return Container(
