@@ -7,7 +7,7 @@ class SummerySection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      final TextStyle normalStyle = const TextStyle(
+    final TextStyle normalStyle = const TextStyle(
       fontSize: 16,
       fontFamily: 'Fira Code',
       height: 1.8,
@@ -28,7 +28,7 @@ class SummerySection extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            HeaderSection(title:  "Professional Summary"),
+            HeaderSection(title: "Professional Summary"),
             const SizedBox(height: 5),
             const Divider(color: Color(0xFF30363D), thickness: 1.5),
             const SizedBox(height: 25),
@@ -71,20 +71,18 @@ class SummerySection extends StatelessWidget {
   }
 }
 
-
-  WidgetSpan _buildBoldWhiteWord(String word) {
-    return WidgetSpan(
-      alignment: PlaceholderAlignment.middle,
-      child: Text(
-        word,
-        style: const TextStyle(
-          fontSize: 16,
-          fontFamily: 'Fira Code',
-          fontWeight: FontWeight.w900,
-          color: Colors.white,
-        ),
+WidgetSpan _buildBoldWhiteWord(String word) {
+  return WidgetSpan(
+    alignment: PlaceholderAlignment.middle,
+    child: Text(
+      word,
+      style: const TextStyle(
+        fontSize: 16,
+        fontFamily: 'Fira Code',
+        fontWeight: FontWeight.w900,
+        height: 1.8,
+        color: Colors.white,
       ),
-    );
-  }
-
-  
+    ),
+  );
+}

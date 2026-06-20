@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:seif_portfolio/presentation/widgets/animated_pulse_arrow.dart';
 
 class PremiumProjectCard extends StatefulWidget {
   final Map<String, dynamic> project;
@@ -282,28 +283,51 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
   }
 
   Widget _buildImageListView(List images) {
-    return SizedBox(
-      height: 260,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        physics: const BouncingScrollPhysics(),
-        itemCount: images.length,
-        itemBuilder: (context, imgIndex) {
-          return Container(
-            margin: const EdgeInsets.only(right: 15),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: const Color(0xFF30363D), width: 1.5),
-              color: const Color(0xFF0D131F),
-            ),
-            clipBehavior: Clip.antiAlias,
-            child: AspectRatio(
-              aspectRatio: 8 / 16,
-              child: Image.asset(images[imgIndex], fit: BoxFit.fill),
-            ),
-          );
-        },
-      ),
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        bool isMobile = constraints.maxWidth < 500;
+        return SizedBox(
+          height: 260,
+          child: Stack(
+            alignment: Alignment.centerRight,
+            children: [
+              ListView.builder(
+                scrollDirection: Axis.horizontal,
+                physics: const BouncingScrollPhysics(),
+                itemCount: images.length,
+                itemBuilder: (context, imgIndex) {
+                  return Container(
+                    margin: const EdgeInsets.only(right: 15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: const Color(0xFF30363D),
+                        width: 1.5,
+                      ),
+                      color: const Color(0xFF0D131F),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: AspectRatio(
+                      aspectRatio: 7 / 16,
+                      child: Image.asset(images[imgIndex], fit: BoxFit.fill),
+                    ),
+                  );
+                },
+              ),
+
+              if (isMobile)
+                IgnorePointer(
+                  child: Padding(
+                    padding: const EdgeInsets.only(right: 10),
+                    child: AnimatedPulseArrow(),
+                  ),
+                ),
+            ],
+          ),
+        );
+      },
     );
   }
+
+  // الـ Widget الخاصة بالسهم المتحرك
 }
