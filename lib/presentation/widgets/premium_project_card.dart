@@ -316,11 +316,9 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
               ),
 
               if (isMobile)
-                IgnorePointer(
-                  child: Padding(
-                    padding: const EdgeInsets.only(right: 10),
-                    child: AnimatedPulseArrow(),
-                  ),
+                Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: AnimatedPulseArrow(),
                 ),
             ],
           ),
@@ -328,6 +326,4 @@ class _PremiumProjectCardState extends State<PremiumProjectCard> {
       },
     );
   }
-
-  // الـ Widget الخاصة بالسهم المتحرك
 }
