@@ -77,10 +77,10 @@ WidgetSpan _buildBoldWhiteWord(String word) {
     child: Text(
       word,
       style: const TextStyle(
-        fontSize: 18,
+        fontSize: 17,
         fontFamily: 'Fira Code',
         fontWeight: FontWeight.w900,
-        height: 2,
+        height: 1.8,
         color: Colors.white,
       ),
     ),
