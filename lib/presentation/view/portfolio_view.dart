@@ -23,8 +23,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
   final GlobalKey _architectureKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
 
-
-
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -38,6 +36,72 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ).copyWith(textScaler: TextScaler.linear(textScaleFactor)),
       child: Scaffold(
         backgroundColor: const Color(0xFF06090E),
+        // إضافة الـ endDrawer عشان يفتح من اليمين
+        endDrawer: Drawer(
+          backgroundColor: const Color(0xFF0D1117),
+          child: ListView(
+            children: [
+              const DrawerHeader(
+                child: Center(
+                  child: Text(
+                    "SEIF TARIQ",
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
+                ),
+              ),
+              ListTile(
+                title: const Text(
+                  "Summary",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () => {
+                  Navigator.pop(context),
+                  _scrollToSection(_summaryKey),
+                },
+              ),
+              ListTile(
+                title: const Text(
+                  "Projects",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () => {
+                  Navigator.pop(context),
+                  _scrollToSection(_projectsKey),
+                },
+              ),
+              ListTile(
+                title: const Text(
+                  "Skills",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () => {
+                  Navigator.pop(context),
+                  _scrollToSection(_skillsKey),
+                },
+              ),
+              ListTile(
+                title: const Text(
+                  "Systems",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () => {
+                  Navigator.pop(context),
+                  _scrollToSection(_architectureKey),
+                },
+              ),
+              ListTile(
+                title: const Text(
+                  "Contact",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onTap: () => {
+                  Navigator.pop(context),
+                  _scrollToSection(_contactKey),
+                },
+              ),
+            ],
+          ),
+        ),
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -92,5 +156,13 @@ class _PortfolioPageState extends State<PortfolioPage> {
     );
   }
 
-  
+  void _scrollToSection(GlobalKey key) {
+  final context = key.currentContext;
+  if (context != null) {
+    Scrollable.ensureVisible(
+      context,
+      duration: const Duration(milliseconds: 800),
+      curve: Curves.easeInOutCubic,
+    );
+  }}
 }
