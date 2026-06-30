@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:seif_portfolio/data/portfolio_data.dart';
 import 'package:seif_portfolio/presentation/widgets/social_button.dart';
@@ -10,12 +11,16 @@ class NavBarSection extends StatelessWidget {
     required this.skillsKey,
     required this.architectureKey,
     required this.contactKey,
+    required this.isMenuOpen,
+    required this.onMenuToggle,
   });
   final GlobalKey summaryKey,
       projectsKey,
       skillsKey,
       architectureKey,
       contactKey;
+  final bool isMenuOpen;
+  final VoidCallback onMenuToggle;
 
   void _scrollToSection(GlobalKey key) {
     final context = key.currentContext;
@@ -31,81 +36,115 @@ class NavBarSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(
-      builder: ((context, constraints) {
-        bool isMobile = constraints.maxWidth < 500;
-        return Positioned(
-          top: 0,
-          left: 0,
-          right: 0,
-          child: Container(
-            height: 80,
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            decoration: BoxDecoration(
-              color: const Color(0xFF0D1117).withValues(alpha: 0.8),
-              border: const Border(
-                bottom: BorderSide(color: Color(0xFF1F293D), width: 1.5),
-              ),
+      builder: (context, constraints) {
+        bool isMobile =
+            constraints.maxWidth <=
+            800; // Increased threshold for better responsiveness
+
+        return AnimatedContainer(
+          duration: const Duration(milliseconds: 400),
+          curve: Curves.easeInOutCubic,
+          height: (isMobile && isMenuOpen) ? 350 : 80,
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          decoration: BoxDecoration(
+            color: const Color(0xFF0D1117).withValues(alpha: 0.9),
+            border: const Border(
+              bottom: BorderSide(color: Color(0xFF1F293D), width: 1.5),
             ),
-            child: isMobile
-                ? IconButton(
-                    icon: const Icon(Icons.menu, color: Colors.white, size: 30),
-                    onPressed: () => Scaffold.of(context).openEndDrawer(),
-                  )
-                : Row(
-                    children: [
-                      const Text(
-                        PortfolioData.name,
-                        style: TextStyle(
-                          color: Color(0xFF58A6FF),
-                          fontFamily: 'Fira Code',
-                          fontWeight: FontWeight.w900,
-                          fontSize: 20,
-                          letterSpacing: 2,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-
-                      Expanded(
-                        child: SingleChildScrollView(
-                          scrollDirection: Axis.horizontal,
-                          child: Row(
-                            children: [
-                              _buildNavButton("Summary", summaryKey),
-                              _buildNavButton("Projects", projectsKey),
-                              _buildNavButton("Skills", skillsKey),
-                              _buildNavButton("Systems", architectureKey),
-                              _buildNavButton("Contact", contactKey),
-                            ],
-                          ),
-                        ),
-                      ),
-
-                      const SizedBox(width: 10),
-                      // الأيقونات
-                      Row(
-                        children: [
-                          SocialButton(
-                            icon: Icons.code_rounded,
-                            tooltip: "GitHub",
-                            url: "https://github.com/seiftarek10",
-                            hoverColor: const Color(0xFF58A6FF),
-                          ),
-                          const SizedBox(width: 10),
-                          SocialButton(
-                            icon: Icons.lan_rounded,
-                            tooltip: "LinkedIn",
-                            url: "https://www.linkedin.com/in/seif-tariq/",
-                            hoverColor: const Color(0xFF0A66C2),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
           ),
+          child: isMobile
+              ? _buildMobileLayout(isMobile)
+              : _buildDesktopLayout(),
         );
-      }),
+      },
     );
   }
+
+  Widget _buildDesktopLayout() {
+    return Row(
+      children: [
+        _buildLogo(),
+        const Spacer(),
+        _buildNavItems(), // Reusable row of buttons
+        const SizedBox(width: 20),
+        _buildSocialButtons(),
+      ],
+    );
+  }
+
+  Widget _buildMobileLayout(bool isMobile) {
+    return Column(
+      children: [
+        Row(
+          children: [
+            _buildLogo(),
+            const Spacer(),
+            IconButton(
+              icon: Icon(
+                isMenuOpen ? Icons.close : Icons.menu,
+                color: Colors.white,
+              ),
+              onPressed: onMenuToggle,
+            ),
+          ],
+        ),
+        if (isMenuOpen) ...[
+          const Divider(color: Color(0xFF1F293D)),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                _buildNavButton("Summary", summaryKey),
+                _buildNavButton("Projects", projectsKey),
+                _buildNavButton("Skills", skillsKey),
+                _buildNavButton("Systems", architectureKey),
+                _buildNavButton("Contact", contactKey),
+              ],
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+
+  // Helper methods to keep code clean
+  Widget _buildLogo() => const Text(
+    PortfolioData.name,
+    style: TextStyle(
+      color: Color(0xFF58A6FF),
+      fontFamily: 'Fira Code',
+      fontWeight: FontWeight.w900,
+      fontSize: 20,
+    ),
+  );
+
+  Widget _buildNavItems() => Row(
+    children: [
+      _buildNavButton("Summary", summaryKey),
+      _buildNavButton("Projects", projectsKey),
+      _buildNavButton("Skills", skillsKey),
+      _buildNavButton("Systems", architectureKey),
+      _buildNavButton("Contact", contactKey),
+    ],
+  );
+
+  Widget _buildSocialButtons() => Row(
+    children: [
+      SocialButton(
+        icon: Icons.code_rounded,
+        tooltip: "GitHub",
+            url: "https://github.com/seiftarek10",
+        hoverColor: const Color(0xFF58A6FF),
+      ),
+      const SizedBox(width: 10),
+      SocialButton(
+        icon: Icons.lan_rounded,
+        tooltip: "LinkedIn",
+        url: "https://www.linkedin.com/in/seif-tariq/",
+        hoverColor: const Color(0xFF0A66C2),
+      ),
+    ],
+  );
 
   Widget _buildNavButton(String title, GlobalKey targetKey) {
     return Padding(
@@ -125,3 +164,4 @@ class NavBarSection extends StatelessWidget {
     );
   }
 }
+

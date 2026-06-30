@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:seif_portfolio/presentation/sections/contact_section.dart';
 import 'package:seif_portfolio/presentation/sections/footer_section.dart';
@@ -23,11 +24,17 @@ class _PortfolioPageState extends State<PortfolioPage> {
   final GlobalKey _architectureKey = GlobalKey();
   final GlobalKey _contactKey = GlobalKey();
 
+  bool _isMenuOpen = false;
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
-    bool isMobile = screenWidth < 768;
-    double textScaleFactor = MediaQuery.of(context).size.width < 768
+    bool isMobile = screenWidth < 500;
+    double textScaleFactor = MediaQuery.of(context).size.width < 500
         ? 0.8
         : 1.0;
     return MediaQuery(
@@ -36,72 +43,6 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ).copyWith(textScaler: TextScaler.linear(textScaleFactor)),
       child: Scaffold(
         backgroundColor: const Color(0xFF06090E),
-        // إضافة الـ endDrawer عشان يفتح من اليمين
-        endDrawer: Drawer(
-          backgroundColor: const Color(0xFF0D1117),
-          child: ListView(
-            children: [
-              const DrawerHeader(
-                child: Center(
-                  child: Text(
-                    "SEIF TARIQ",
-                    style: TextStyle(color: Colors.white, fontSize: 20),
-                  ),
-                ),
-              ),
-              ListTile(
-                title: const Text(
-                  "Summary",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () => {
-                  Navigator.pop(context),
-                  _scrollToSection(_summaryKey),
-                },
-              ),
-              ListTile(
-                title: const Text(
-                  "Projects",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () => {
-                  Navigator.pop(context),
-                  _scrollToSection(_projectsKey),
-                },
-              ),
-              ListTile(
-                title: const Text(
-                  "Skills",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () => {
-                  Navigator.pop(context),
-                  _scrollToSection(_skillsKey),
-                },
-              ),
-              ListTile(
-                title: const Text(
-                  "Systems",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () => {
-                  Navigator.pop(context),
-                  _scrollToSection(_architectureKey),
-                },
-              ),
-              ListTile(
-                title: const Text(
-                  "Contact",
-                  style: TextStyle(color: Colors.white),
-                ),
-                onTap: () => {
-                  Navigator.pop(context),
-                  _scrollToSection(_contactKey),
-                },
-              ),
-            ],
-          ),
-        ),
         body: Container(
           decoration: const BoxDecoration(
             gradient: LinearGradient(
@@ -123,20 +64,54 @@ class _PortfolioPageState extends State<PortfolioPage> {
                     child: Column(
                       children: [
                         const SizedBox(height: 120),
-                        MyInfoSection(),
-
-                        Container(key: _summaryKey, child: SummerySection()),
-                        MainGridSection(
-                          skillsKey: _skillsKey,
-                          projectsKey: _projectsKey,
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          child: MyInfoSection(),
                         ),
-                        Container(
-                          key: _architectureKey,
-                          child: SystemSection(),
-                        ),
-                        Container(key: _contactKey, child: ContactSection()),
 
-                        FooterSection(),
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          delay: const Duration(milliseconds: 200),
+                          child: Container(
+                            key: _summaryKey,
+                            child: SummerySection(),
+                          ),
+                        ),
+
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          delay: const Duration(milliseconds: 400),
+                          child: MainGridSection(
+                            skillsKey: _skillsKey,
+                            projectsKey: _projectsKey,
+                          ),
+                        ),
+
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          delay: const Duration(milliseconds: 600),
+                          child: Container(
+                            key: _architectureKey,
+                            child: SystemSection(),
+                          ),
+                        ),
+
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          delay: const Duration(milliseconds: 800),
+                          child: Container(
+                            key: _contactKey,
+                            child: ContactSection(),
+                          ),
+                        ),
+                        FadeInUp(
+                          duration: Duration(milliseconds: 800),
+                          delay: const Duration(milliseconds: 1000),
+                          child: Container(
+                            key: _contactKey,
+                            child: FooterSection(),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -148,6 +123,12 @@ class _PortfolioPageState extends State<PortfolioPage> {
                 skillsKey: _skillsKey,
                 architectureKey: _architectureKey,
                 contactKey: _contactKey,
+                isMenuOpen: _isMenuOpen,
+                onMenuToggle: () {
+                  setState(() {
+                    _isMenuOpen = !_isMenuOpen;
+                  });
+                },
               ),
             ],
           ),
@@ -155,14 +136,4 @@ class _PortfolioPageState extends State<PortfolioPage> {
       ),
     );
   }
-
-  void _scrollToSection(GlobalKey key) {
-  final context = key.currentContext;
-  if (context != null) {
-    Scrollable.ensureVisible(
-      context,
-      duration: const Duration(milliseconds: 800),
-      curve: Curves.easeInOutCubic,
-    );
-  }}
 }

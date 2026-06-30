@@ -40,22 +40,24 @@ class MyInfoSection extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 35),
-        Text(
-          PortfolioData.name,
-          textAlign: isMobileLayout ? TextAlign.center : TextAlign.start,
-          style: TextStyle(
-            fontFamily: 'Fira Code',
-            fontSize: nameFontSize,
-            fontWeight: FontWeight.w900,
-            color: Colors.white,
-            letterSpacing: 6.0,
-            shadows: const [
-              Shadow(
-                color: Color(0xFF58A6FF),
-                offset: Offset(0, 4),
-                blurRadius: 20,
-              ),
-            ],
+        Center(
+          child: Text(
+            PortfolioData.name,
+            textAlign: isMobileLayout ? TextAlign.center : TextAlign.start,
+            style: TextStyle(
+              fontFamily: 'Fira Code',
+              fontSize: nameFontSize,
+              fontWeight: FontWeight.w900,
+              color: Colors.white,
+              letterSpacing: 6.0,
+              shadows: const [
+                Shadow(
+                  color: Color(0xFF58A6FF),
+                  offset: Offset(0, 4),
+                  blurRadius: 20,
+                ),
+              ],
+            ),
           ),
         ),
         const SizedBox(height: 20),
