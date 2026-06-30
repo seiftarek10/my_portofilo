@@ -94,8 +94,8 @@ class NavBarSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 _buildNavButton("Summary", summaryKey),
-                _buildNavButton("Projects", projectsKey),
                 _buildNavButton("Skills", skillsKey),
+                _buildNavButton("Projects", projectsKey),
                 _buildNavButton("Systems", architectureKey),
                 _buildNavButton("Contact", contactKey),
               ],
