@@ -53,63 +53,65 @@ class _PortfolioPageState extends State<PortfolioPage> {
           ),
           child: Stack(
             children: [
-              SelectionArea(
-                child: SingleChildScrollView(
-                  controller: _scrollController,
-                  physics: const BouncingScrollPhysics(),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: isMobile ? 20 : 50,
-                    ),
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 120),
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          child: MyInfoSection(),
-                        ),
-
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          delay: const Duration(milliseconds: 200),
-                          child: Container(
-                            key: _summaryKey,
-                            child: SummerySection(),
+              Positioned.fill(
+                child: SelectionArea(
+                  child: SingleChildScrollView(
+                    controller: _scrollController,
+                    physics: const BouncingScrollPhysics(),
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: isMobile ? 20 : 50,
+                      ),
+                      child: Column(
+                        children: [
+                          const SizedBox(height: 120),
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            child: MyInfoSection(),
                           ),
-                        ),
-
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          delay: const Duration(milliseconds: 400),
-                          child: MainGridSection(
-                            skillsKey: _skillsKey,
-                            projectsKey: _projectsKey,
+                
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            delay: const Duration(milliseconds: 200),
+                            child: Container(
+                              key: _summaryKey,
+                              child: SummerySection(),
+                            ),
                           ),
-                        ),
-
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          delay: const Duration(milliseconds: 600),
-                          child: Container(
-                            key: _architectureKey,
-                            child: SystemSection(),
+                
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            delay: const Duration(milliseconds: 400),
+                            child: MainGridSection(
+                              skillsKey: _skillsKey,
+                              projectsKey: _projectsKey,
+                            ),
                           ),
-                        ),
-
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          delay: const Duration(milliseconds: 800),
-                          child: Container(
-                            key: _contactKey,
-                            child: ContactSection(),
+                
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            delay: const Duration(milliseconds: 600),
+                            child: Container(
+                              key: _architectureKey,
+                              child: SystemSection(),
+                            ),
                           ),
-                        ),
-                        FadeInUp(
-                          duration: Duration(milliseconds: 800),
-                          delay: const Duration(milliseconds: 1000),
-                          child: FooterSection(),
-                        ),
-                      ],
+                
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            delay: const Duration(milliseconds: 800),
+                            child: Container(
+                              key: _contactKey,
+                              child: ContactSection(),
+                            ),
+                          ),
+                          FadeInUp(
+                            duration: Duration(milliseconds: 800),
+                            delay: const Duration(milliseconds: 1000),
+                            child: FooterSection(),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
