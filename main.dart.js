@@ -73706,7 +73706,7 @@ if(n){s=A.ke(B.y4,p,p)
 r=k.w
 q=t.p
 s=A.c([A.fp(A.c([s,B.xI,A.Ga(p,A.pC(r?B.D9:B.Da,B.j,p,p),p,p,k.x,p,p,p)],q),B.Y,B.A,B.C)],q)
-if(r)B.b.O(s,A.c([B.BZ,A.hP(A.df(A.c([k.im("Summary",k.c),k.im(o,k.d),k.im("Skills",k.e),k.im("Systems",k.f),k.im("Contact",k.r)],q),B.Y,B.rz,B.C),1)],q))
+if(r)B.b.O(s,A.c([B.BZ,A.hP(A.df(A.c([k.im("Summary",k.c),k.im("Skills",k.e),k.im(o,k.d),k.im("Systems",k.f),k.im("Contact",k.r)],q),B.Y,B.rz,B.C),1)],q))
 k=A.df(s,B.Y,B.jd,B.C)}else{s=t.p
 s=A.fp(A.c([A.ke(B.y4,p,p),B.xI,A.fp(A.c([k.im("Summary",k.c),k.im(o,k.d),k.im("Skills",k.e),k.im("Systems",k.f),k.im("Contact",k.r)],s),B.Y,B.A,B.C),B.h9,A.fp(A.c([new A.ym(B.mi,"GitHub","https://github.com/seiftarek10",B.av,p),B.Nz,new A.ym(B.Dv,"LinkedIn","https://www.linkedin.com/in/seif-tariq/",B.AG,p)],s),B.Y,B.A,B.C)],s),B.Y,B.A,B.C)
 k=s}return A.DB(k,B.i4,new A.bV(l,p,B.z_,p,p,p,B.Z),B.lP,m,p,B.Cx)},
