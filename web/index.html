@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <!--
     If you are serving your web app in a path other than the root, change the
@@ -27,26 +28,27 @@
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png" />
 
   <title>seif_portfolio</title>
-  <link rel="manifest" href="./manifest.json">
+  <link rel="manifest" href="/my_portofilo/manifest.json">
 </head>
+
 <body>
-  <script src="./flutter_bootstrap.js" async></script>
+  <script src="/my_portofilo/flutter_bootstrap.js" async></script>
   <script type="text/javascript">
-    window.addEventListener('load', function(ev) {
-      _flutter.loader.loadEntrypoint({
+    window.addEventListener('load', function (ev) {
+      _flutter.loader.load({
         config: {
-          renderer: "html" 
+          renderer: "html"
         },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            appRunner.runApp();
-          });
+        onEntrypointLoaded: async function (engineInitializer) {
+          let appRunner = await engineInitializer.initializeEngine();
+          await appRunner.runApp();
         }
       });
     });
   </script>
 </body>
+
 </html>

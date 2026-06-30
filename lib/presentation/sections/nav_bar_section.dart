@@ -39,7 +39,7 @@ class NavBarSection extends StatelessWidget {
       builder: (context, constraints) {
         bool isMobile =
             constraints.maxWidth <=
-            800; // Increased threshold for better responsiveness
+            600; 
 
         return AnimatedContainer(
           duration: const Duration(milliseconds: 400),
@@ -65,7 +65,7 @@ class NavBarSection extends StatelessWidget {
       children: [
         _buildLogo(),
         const Spacer(),
-        _buildNavItems(), // Reusable row of buttons
+        _buildNavItems(), 
         const SizedBox(width: 20),
         _buildSocialButtons(),
       ],
@@ -74,6 +74,7 @@ class NavBarSection extends StatelessWidget {
 
   Widget _buildMobileLayout(bool isMobile) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
           children: [
