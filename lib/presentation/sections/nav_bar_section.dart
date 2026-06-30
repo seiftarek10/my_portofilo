@@ -107,13 +107,15 @@ class NavBarSection extends StatelessWidget {
   }
 
   // Helper methods to keep code clean
-  Widget _buildLogo() => const Text(
-    PortfolioData.name,
-    style: TextStyle(
-      color: Color(0xFF58A6FF),
-      fontFamily: 'Fira Code',
-      fontWeight: FontWeight.w900,
-      fontSize: 20,
+  Widget _buildLogo() => Center(
+    child: const Text(
+      PortfolioData.name,
+      style: TextStyle(
+        color: Color(0xFF58A6FF),
+        fontFamily: 'Fira Code',
+        fontWeight: FontWeight.w900,
+        fontSize: 20,
+      ),
     ),
   );
 
