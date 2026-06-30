@@ -107,10 +107,7 @@ class _PortfolioPageState extends State<PortfolioPage> {
                         FadeInUp(
                           duration: Duration(milliseconds: 800),
                           delay: const Duration(milliseconds: 1000),
-                          child: Container(
-                            key: _contactKey,
-                            child: FooterSection(),
-                          ),
+                          child: FooterSection(),
                         ),
                       ],
                     ),
@@ -119,8 +116,9 @@ class _PortfolioPageState extends State<PortfolioPage> {
               ),
               NavBarSection(
                 summaryKey: _summaryKey,
-                projectsKey: _projectsKey,
                 skillsKey: _skillsKey,
+                projectsKey: _projectsKey,
+
                 architectureKey: _architectureKey,
                 contactKey: _contactKey,
                 isMenuOpen: _isMenuOpen,
