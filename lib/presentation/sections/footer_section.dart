@@ -5,9 +5,9 @@ class FooterSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-     return Container(
+    return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(vertical: 60),
+      padding: const EdgeInsets.symmetric(vertical: 60, horizontal: 20),
       decoration: const BoxDecoration(
         color: Color(0xFF03060A),
         border: Border(top: BorderSide(color: Color(0xFF1F293D))),
@@ -15,6 +15,7 @@ class FooterSection extends StatelessWidget {
       child: const Center(
         child: Text(
           "// ALL ARCHITECTURAL LOOPS CLOSED PERFECTLY. DESIGNED BY SEIF TARIQ © 2026",
+          textAlign: TextAlign.center,
           style: TextStyle(
             fontFamily: 'Fira Code',
             color: Color(0xFF58A6FF),
@@ -27,5 +28,3 @@ class FooterSection extends StatelessWidget {
     );
   }
 }
-
- 

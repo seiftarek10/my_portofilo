@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:seif_portfolio/data/portfolio_data.dart';
 import 'package:seif_portfolio/presentation/widgets/social_button.dart';
@@ -37,9 +36,7 @@ class NavBarSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        bool isMobile =
-            constraints.maxWidth <=
-            600; 
+        bool isMobile = constraints.maxWidth <= 600;
 
         return AnimatedContainer(
           duration: const Duration(milliseconds: 400),
@@ -65,7 +62,7 @@ class NavBarSection extends StatelessWidget {
       children: [
         _buildLogo(),
         const Spacer(),
-        _buildNavItems(), 
+        _buildNavItems(),
         const SizedBox(width: 20),
         _buildSocialButtons(),
       ],
@@ -77,6 +74,7 @@ class NavBarSection extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             _buildLogo(),
             const Spacer(),
@@ -134,7 +132,7 @@ class NavBarSection extends StatelessWidget {
       SocialButton(
         icon: Icons.code_rounded,
         tooltip: "GitHub",
-            url: "https://github.com/seiftarek10",
+        url: "https://github.com/seiftarek10",
         hoverColor: const Color(0xFF58A6FF),
       ),
       const SizedBox(width: 10),
@@ -165,4 +163,3 @@ class NavBarSection extends StatelessWidget {
     );
   }
 }
-
