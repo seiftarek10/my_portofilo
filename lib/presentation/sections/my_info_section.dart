@@ -6,7 +6,7 @@ class MyInfoSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-       double screenWidth = MediaQuery.of(context).size.width;
+    double screenWidth = MediaQuery.of(context).size.width;
     bool isMobileLayout = screenWidth < 1100;
 
     double imageSize = isMobileLayout ? 250 : 420;
@@ -92,7 +92,7 @@ class MyInfoSection extends StatelessWidget {
         height: imageSize,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: const Color(0xFF161B22).withValues(alpha: 0.3),
+          color: const Color(0xFF161B22).withValues(alpha: 0.4),
           border: Border.all(color: const Color(0xFF21262D), width: 1.5),
         ),
         child: ClipOval(
@@ -129,6 +129,3 @@ class MyInfoSection extends StatelessWidget {
     );
   }
 }
-
- 
-  
